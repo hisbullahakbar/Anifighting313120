@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 26967dad1429b5549b67f85348a49b48
+timeCreated: 1494427036
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Erza Crouch Attack_0
+    21300002: Erza Crouch Attack_1
+    21300004: Erza Crouch Attack_2
+    21300006: Erza Crouch Attack_3
+    21300008: Erza Crouch Attack_4
+    21300010: Erza Crouch Attack_5
+    21300012: Erza Crouch Attack_6
+    21300014: Erza Crouch Attack_7
+    21300016: Erza Crouch Attack_8
+    21300018: Erza Crouch Attack_9
+    21300020: Erza Crouch Attack_10
+    21300022: Erza Crouch Attack_11
+    21300024: Erza Crouch Attack_12
+    21300026: Erza Crouch Attack_13
+    21300028: Erza Crouch Attack_14
+    21300030: Erza Crouch Attack_15
+    21300032: Erza Crouch Attack_16
+    21300034: Erza Crouch Attack_17
+    21300036: Erza Crouch Attack_18
+    21300038: Erza Crouch Attack_19
+    21300040: Erza Crouch Attack_20
+    21300042: Erza Crouch Attack_21
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Erza Crouch Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 343
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 344
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_2
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 341
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 343
+        width: 50
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_4
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 343
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_5
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 344
+        width: 48
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_6
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 344
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_7
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 341
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_8
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 343
+        width: 31
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_9
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 343
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_10
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 341
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_11
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 344
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_12
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 30
+        width: 197
+        height: 216
+      alignment: 9
+      pivot: {x: 0.69474876, y: 0.62296623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 30
+        width: 274
+        height: 196
+      alignment: 9
+      pivot: {x: 0.7405475, y: 0.625476}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_14
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 30
+        width: 328
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_15
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 30
+        width: 321
+        height: 269
+      alignment: 9
+      pivot: {x: 0.6323581, y: 0.48973963}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_16
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 30
+        width: 265
+        height: 276
+      alignment: 9
+      pivot: {x: 0.32758513, y: 0.6182451}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_17
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 30
+        width: 247
+        height: 284
+      alignment: 9
+      pivot: {x: 0.52320766, y: 0.60092014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_18
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 12
+        width: 177
+        height: 197
+      alignment: 9
+      pivot: {x: 0.7164893, y: 0.7885365}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_19
+      rect:
+        serializedVersion: 2
+        x: 1972
+        y: 5
+        width: 191
+        height: 263
+      alignment: 9
+      pivot: {x: 0.67506033, y: 0.73308074}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_20
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 16
+        width: 197
+        height: 295
+      alignment: 9
+      pivot: {x: 0.59900707, y: 0.6038987}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Crouch Attack_21
+      rect:
+        serializedVersion: 2
+        x: 2420
+        y: 9
+        width: 131
+        height: 290
+      alignment: 9
+      pivot: {x: 0.6467882, y: 0.5884092}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

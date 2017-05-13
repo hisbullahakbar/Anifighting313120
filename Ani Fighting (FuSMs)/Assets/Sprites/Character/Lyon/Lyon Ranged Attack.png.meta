@@ -1,0 +1,344 @@
+fileFormatVersion: 2
+guid: 670d428a2ad3db44288b183f02471d27
+timeCreated: 1493423205
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Lyon Ranged Attack_0
+    21300002: Lyon Ranged Attack_1
+    21300004: Lyon Ranged Attack_2
+    21300006: Lyon Ranged Attack_3
+    21300008: Lyon Ranged Attack_4
+    21300010: Lyon Ranged Attack_5
+    21300012: Lyon Ranged Attack_6
+    21300014: Lyon Ranged Attack_7
+    21300016: Lyon Ranged Attack_8
+    21300018: Lyon Ranged Attack_9
+    21300020: Lyon Ranged Attack_10
+    21300022: Lyon Ranged Attack_11
+    21300024: Lyon Ranged Attack_12
+    21300026: Lyon Ranged Attack_13
+    21300028: Lyon Ranged Attack_14
+    21300030: Lyon Ranged Attack_15
+    21300032: Lyon Ranged Attack_16
+    21300034: Lyon Ranged Attack_17
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 381
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 379
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_2
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 381
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 363
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 379
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_5
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 379
+        width: 44
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_6
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 381
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_7
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 379
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_8
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 379
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_9
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 379
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_10
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 379
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_11
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 381
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_12
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 18
+        width: 165
+        height: 281
+      alignment: 9
+      pivot: {x: 0.42126843, y: 0.5693453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_13
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 21
+        width: 159
+        height: 284
+      alignment: 9
+      pivot: {x: 0.36927614, y: 0.5640386}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_14
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 24
+        width: 169
+        height: 281
+      alignment: 9
+      pivot: {x: 0.5614942, y: 0.5739681}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_15
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 33
+        width: 262
+        height: 278
+      alignment: 9
+      pivot: {x: 0.39091784, y: 0.57009363}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_16
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 27
+        width: 246
+        height: 278
+      alignment: 9
+      pivot: {x: 0.36270016, y: 0.56542057}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack_17
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 33
+        width: 234
+        height: 278
+      alignment: 9
+      pivot: {x: 0.32235014, y: 0.5654205}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

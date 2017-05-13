@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: 41b021865aff2a74db523049dce8575e
+timeCreated: 1492788738
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Lyon Light Attack 1_0
+    21300002: Lyon Light Attack 1_1
+    21300004: Lyon Light Attack 1_2
+    21300006: Lyon Light Attack 1_3
+    21300008: Lyon Light Attack 1_4
+    21300010: Lyon Light Attack 1_5
+    21300012: Lyon Light Attack 1_6
+    21300014: Lyon Light Attack 1_7
+    21300016: Lyon Light Attack 1_8
+    21300018: Lyon Light Attack 1_9
+    21300020: Lyon Light Attack 1_10
+    21300022: Lyon Light Attack 1_11
+    21300024: Lyon Light Attack 1_12
+    21300026: Lyon Light Attack 1_15
+    21300028: Lyon Light Attack 1_17
+    21300030: Lyon Light Attack 1_16
+    21300032: Lyon Light Attack 1_16
+    21300034: Lyon Light Attack 1_17
+    21300036: Lyon Light Attack 1_13
+    21300038: Lyon Light Attack 1_19
+    21300040: Lyon Light Attack 1_20
+    21300042: Lyon Light Attack 1_14
+    21300044: Lyon Light Attack 1_22
+    21300046: Lyon Light Attack 1_23
+    21300048: Lyon Light Attack 1_24
+    21300050: Lyon Light Attack 1_18
+    21300052: Lyon Light Attack 1_19
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 360
+        width: 46
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 408
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 360
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 358
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_4
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 360
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_5
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 358
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_6
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 358
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_7
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 360
+        width: 46
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_8
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 360
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_9
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 360
+        width: 21
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_10
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 342
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_11
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 358
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_12
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 358
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_15
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 0
+        width: 408
+        height: 319
+      alignment: 9
+      pivot: {x: 0.459823, y: 0.4986138}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_16
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 3
+        width: 250
+        height: 316
+      alignment: 9
+      pivot: {x: 0.77538913, y: 0.4825637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_13
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1
+        width: 178
+        height: 275
+      alignment: 9
+      pivot: {x: 0.6473457, y: 0.5917256}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_14
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1
+        width: 222
+        height: 263
+      alignment: 9
+      pivot: {x: 0.66982925, y: 0.6123279}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_18
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 1
+        width: 172
+        height: 257
+      alignment: 9
+      pivot: {x: 0.70966715, y: 0.5818915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_19
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 1
+        width: 162
+        height: 266
+      alignment: 9
+      pivot: {x: 0.6315421, y: 0.6116249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Light Attack 1_17
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 1
+        width: 250
+        height: 316
+      alignment: 9
+      pivot: {x: 0.77538913, y: 0.4929385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

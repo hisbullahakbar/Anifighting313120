@@ -1,0 +1,456 @@
+fileFormatVersion: 2
+guid: d57716f106549e140ac3d12c4d0eb704
+timeCreated: 1492615347
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Lyon Begining Pose_0
+    21300002: Lyon Begining Pose_1
+    21300004: Lyon Begining Pose_2
+    21300006: Lyon Begining Pose_3
+    21300008: Lyon Begining Pose_4
+    21300010: Lyon Begining Pose_5
+    21300012: Lyon Begining Pose_6
+    21300014: Lyon Begining Pose_7
+    21300016: Lyon Begining Pose_8
+    21300018: Lyon Begining Pose_9
+    21300020: Lyon Begining Pose_10
+    21300022: Lyon Begining Pose_11
+    21300024: Lyon Begining Pose_12
+    21300026: Lyon Begining Pose_13
+    21300028: Lyon Begining Pose_14
+    21300030: Lyon Begining Pose_15
+    21300032: Lyon Begining Pose_16
+    21300034: Lyon Begining Pose_17
+    21300036: Lyon Begining Pose_18
+    21300038: Lyon Begining Pose_19
+    21300040: Lyon Begining Pose_20
+    21300042: Lyon Begining Pose_21
+    21300044: Lyon Begining Pose_22
+    21300046: Lyon Begining Pose_23
+    21300048: Lyon Begining Pose_24
+    21300050: Lyon Begining Pose_25
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lyon Begining Pose_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 734
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_1
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 783
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 783
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_3
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 732
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_4
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 714
+        width: 47
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_5
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 734
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_6
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 734
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_7
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 734
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_8
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 734
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_9
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 714
+        width: 47
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 374
+        width: 154
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_11
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 383
+        width: 170
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_12
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 386
+        width: 174
+        height: 280
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_13
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 379
+        width: 168
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_14
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 378
+        width: 164
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_15
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 383
+        width: 186
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_16
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 378
+        width: 150
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_17
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 387
+        width: 268
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_18
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 392
+        width: 318
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_19
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 176
+        width: 156
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_20
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 252
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_21
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 4
+        width: 267
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_22
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 7
+        width: 215
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_23
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 11
+        width: 187
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_24
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 7
+        width: 162
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Begining Pose_25
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 114
+        width: 155
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

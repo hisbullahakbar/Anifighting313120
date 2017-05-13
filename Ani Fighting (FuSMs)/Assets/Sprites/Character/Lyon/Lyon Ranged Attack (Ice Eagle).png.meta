@@ -1,0 +1,218 @@
+fileFormatVersion: 2
+guid: b239f54d23aae8a428d9d3e648fc3acb
+timeCreated: 1493572210
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Lyon Ranged Attack (Ice Eagle)_0
+    21300002: Lyon Ranged Attack (Ice Eagle)_1
+    21300004: Lyon Ranged Attack (Ice Eagle)_2
+    21300006: Lyon Ranged Attack (Ice Eagle)_3
+    21300008: Lyon Ranged Attack (Ice Eagle)_4
+    21300010: Lyon Ranged Attack (Ice Eagle)_5
+    21300012: Lyon Ranged Attack (Ice Eagle)_6
+    21300014: Lyon Ranged Attack (Ice Eagle)_7
+    21300016: Lyon Ranged Attack (Ice Eagle)_8
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lyon Ranged Attack (Ice Eagle)_0
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 137
+        width: 177
+        height: 76
+      alignment: 9
+      pivot: {x: 0.79483885, y: 0.44080472}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack (Ice Eagle)_1
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 146
+        width: 178
+        height: 140
+      alignment: 9
+      pivot: {x: 0.78692454, y: 0.109660015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack (Ice Eagle)_2
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 108
+        width: 177
+        height: 85
+      alignment: 9
+      pivot: {x: 0.7683471, y: 0.6742469}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack (Ice Eagle)_3
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 37
+        width: 162
+        height: 149
+      alignment: 9
+      pivot: {x: 0.844106, y: 0.86279154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack (Ice Eagle)_4
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 116
+        width: 168
+        height: 92
+      alignment: 9
+      pivot: {x: 0.4872807, y: 0.29810566}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack (Ice Eagle)_5
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 112
+        width: 192
+        height: 126
+      alignment: 9
+      pivot: {x: 0.48573875, y: 0.23921373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack (Ice Eagle)_6
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 108
+        width: 205
+        height: 160
+      alignment: 9
+      pivot: {x: 0.48641506, y: 0.18947306}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack (Ice Eagle)_7
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 83
+        width: 233
+        height: 189
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17149559}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Ranged Attack (Ice Eagle)_8
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 71
+        width: 188
+        height: 201
+      alignment: 9
+      pivot: {x: 0.5050802, y: 0.16259469}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

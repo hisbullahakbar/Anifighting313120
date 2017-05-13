@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: e1b786e2939725e4785a985b69a643f8
+timeCreated: 1494424514
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Erza Ranged Attack (Thunder Lance)_0
+    21300002: Erza Ranged Attack (Thunder Lance)_1
+    21300004: Erza Ranged Attack (Thunder Lance)_2
+    21300006: Erza Ranged Attack (Thunder Lance)_3
+    21300008: Erza Ranged Attack (Thunder Lance)_4
+    21300010: Erza Ranged Attack (Thunder Lance)_5
+    21300012: Erza Ranged Attack (Thunder Lance)_6
+    21300014: Erza Ranged Attack (Thunder Lance)_7
+    21300016: Erza Ranged Attack (Thunder Lance)_8
+    21300018: Erza Ranged Attack (Thunder Lance)_9
+    21300020: Erza Ranged Attack (Thunder Lance)_10
+    21300022: Erza Ranged Attack (Thunder Lance)_11
+    21300024: Erza Ranged Attack (Thunder Lance)_12
+    21300026: Erza Ranged Attack (Thunder Lance)_13
+    21300028: Erza Ranged Attack (Thunder Lance)_14
+    21300030: Erza Ranged Attack (Thunder Lance)_15
+    21300032: Erza Ranged Attack (Thunder Lance)_16
+    21300034: Erza Ranged Attack (Thunder Lance)_17
+    21300036: Erza Ranged Attack (Thunder Lance)_18
+    21300038: Erza Ranged Attack (Thunder Lance)_19
+    21300040: Erza Ranged Attack (Thunder Lance)_20
+    21300042: Erza Ranged Attack (Thunder Lance)_21
+    21300044: Erza Ranged Attack (Thunder Lance)_22
+    21300046: Erza Ranged Attack (Thunder Lance)_23
+    21300048: Erza Ranged Attack (Thunder Lance)_24
+    21300050: Erza Ranged Attack (Thunder Lance)_25
+    21300052: Erza Ranged Attack (Thunder Lance)_26
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 314
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 312
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 314
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_3
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 296
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 312
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_5
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 312
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_6
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 314
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_7
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 312
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_8
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 312
+        width: 29
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_9
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 312
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_10
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 312
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_11
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 314
+        width: 46
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_12
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 301
+        width: 20
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_13
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 314
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_14
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 314
+        width: 46
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_15
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 312
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_16
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 314
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_17
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 312
+        width: 44
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_18
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 312
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_19
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 314
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_20
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 314
+        width: 46
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_21
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 312
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_22
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 314
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_23
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 312
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_24
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 312
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_25
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 301
+        width: 19
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Ranged Attack (Thunder Lance)_26
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 422
+        height: 241
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5086479}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

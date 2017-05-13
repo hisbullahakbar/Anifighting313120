@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: 17e0328ea8e858e40bce6a9f839f0b3f
+timeCreated: 1494341023
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Erza Jump Ranged Attack_0
+    21300002: Erza Jump Ranged Attack_1
+    21300004: Erza Jump Ranged Attack_2
+    21300006: Erza Jump Ranged Attack_3
+    21300008: Erza Jump Ranged Attack_4
+    21300010: Erza Jump Ranged Attack_5
+    21300012: Erza Jump Ranged Attack_6
+    21300014: Erza Jump Ranged Attack_7
+    21300016: Erza Jump Ranged Attack_8
+    21300018: Erza Jump Ranged Attack_9
+    21300020: Erza Jump Ranged Attack_10
+    21300022: Erza Jump Ranged Attack_11
+    21300024: Erza Jump Ranged Attack_12
+    21300026: Erza Jump Ranged Attack_13
+    21300028: Erza Jump Ranged Attack_14
+    21300030: Erza Jump Ranged Attack_15
+    21300032: Erza Jump Ranged Attack_16
+    21300034: Erza Jump Ranged Attack_17
+    21300036: Erza Jump Ranged Attack_18
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 356
+        width: 34
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 371
+        width: 46
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_2
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 373
+        width: 70
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_3
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 356
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_4
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 373
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_5
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 371
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_6
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 373
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 355
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_8
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 371
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_9
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 371
+        width: 44
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_10
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 373
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_11
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 371
+        width: 30
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_12
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 371
+        width: 31
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_13
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 371
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_14
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 371
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_15
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 373
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_16
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 5
+        width: 156
+        height: 239
+      alignment: 9
+      pivot: {x: 0.6854625, y: 0.56207937}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_17
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 2
+        width: 348
+        height: 291
+      alignment: 9
+      pivot: {x: 0.6364322, y: 0.4719575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Jump Ranged Attack_18
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 0
+        width: 272
+        height: 316
+      alignment: 9
+      pivot: {x: 0.7836488, y: 0.44600454}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
