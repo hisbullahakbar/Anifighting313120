@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Character : MonoBehaviour {
+public abstract class Character : MonoBehaviour
+{
 
-	[SerializeField]
-	protected float movementSpeed;
-	[SerializeField]
+    [SerializeField]
+    protected float movementSpeed;
+    [SerializeField]
     protected bool facingRight;
 
-	[SerializeField]
+    [SerializeField]
     private GameObject[] castedMagicPrefab;
-	[SerializeField]
-	protected Transform magicPos;
+    [SerializeField]
+    protected Transform magicPos;
 
     [SerializeField]
     private Transform[] groundPoints;
@@ -26,24 +27,31 @@ public abstract class Character : MonoBehaviour {
     [SerializeField]
     private float jumpForce;
 
+    [SerializeField]
+    protected int health;
+    public abstract bool IsDead { get; }
+
+
     public Animator CharaAnimator { get; private set; }
     public Rigidbody2D charaRigidbody2D { get; set; }
-	public bool attack { get; set; }
-	public bool jump { get; set; }
-	public bool onGround { get; set; }
-	public bool guard { get; set; }
-	public bool crouch { get; set; }
+    public bool attack { get; set; }
+    public bool jump { get; set; }
+    public bool onGround { get; set; }
+    public bool guard { get; set; }
+    public bool crouch { get; set; }
     public float horizontal { get; set; }
 
-	public virtual void Start () {
+    public virtual void Start()
+    {
         CharaAnimator = GetComponent<Animator>();
-        charaRigidbody2D = GetComponent<Rigidbody2D>(); 
-		//facingRight = true;
-	}
-	
-	void Update () {
-		
-	}
+        charaRigidbody2D = GetComponent<Rigidbody2D>();
+        //facingRight = true;
+    }
+
+    void Update()
+    {
+
+    }
 
     public virtual void FixedUpdate()
     {
@@ -70,37 +78,45 @@ public abstract class Character : MonoBehaviour {
         CharaAnimator.SetFloat("speed", Mathf.Abs(horizontal));
     }
 
-	public void ChangeDirection(){
-		facingRight = !facingRight;
-		transform.localScale = new Vector3 (transform.localScale.x * -1, 1, 1);
-	}
+    public void ChangeDirection()
+    {
+        facingRight = !facingRight;
+        transform.localScale = new Vector3(transform.localScale.x * -1, 1, 1);
+    }
 
-	public virtual void CastingMagic(int value){
-		if (facingRight) {
-			GameObject temp = (GameObject)Instantiate (castedMagicPrefab[value], magicPos.position, Quaternion.Euler (0, 0, 0));
-			temp.GetComponent<MagicAttack> ().Initialize (Vector2.right);
-		} else {
+    public virtual void CastingMagic(int value)
+    {
+        if (facingRight)
+        {
+            GameObject temp = (GameObject)Instantiate(castedMagicPrefab[value], magicPos.position, Quaternion.Euler(0, 0, 0));
+            temp.GetComponent<MagicAttack>().Initialize(Vector2.right);
+        }
+        else
+        {
             GameObject temp = Instantiate(castedMagicPrefab[value], magicPos.position, Quaternion.Euler(0, 180, 0));
-			temp.GetComponent<MagicAttack> ().Initialize (Vector2.left);
-		}
-	}
+            temp.GetComponent<MagicAttack>().Initialize(Vector2.left);
+        }
+    }
 
-	protected bool IsGrounded(Rigidbody2D charaRigidbody2D, Transform[] groundPoints, float groundRadius, int whatIsGround){
-		if (charaRigidbody2D.velocity.y <= 0) {
-			foreach(Transform point in groundPoints){
-				Collider2D[] colliders = Physics2D.OverlapCircleAll (point.position, groundRadius, whatIsGround);
+    protected bool IsGrounded(Rigidbody2D charaRigidbody2D, Transform[] groundPoints, float groundRadius, int whatIsGround)
+    {
+        if (charaRigidbody2D.velocity.y <= 0)
+        {
+            foreach (Transform point in groundPoints)
+            {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(point.position, groundRadius, whatIsGround);
 
-				for(int i = 0; i < colliders.Length; i++)
-				{
-					if(colliders[i].gameObject != gameObject)
-					{
-						return true;
-					}
-				}
-			}
-		}
-		return false;
-	}
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    if (colliders[i].gameObject != gameObject)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
 
     private void HandleLayers()
     {
@@ -113,6 +129,16 @@ public abstract class Character : MonoBehaviour {
         {
             CharaAnimator.SetLayerWeight(1, 0);
             CharaAnimator.SetLayerWeight(2, 1);
+        }
+    }
+
+    public abstract IEnumerator TakeDamage();
+
+    public virtual void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Knife")
+        {
+            StartCoroutine(TakeDamage());
         }
     }
 }

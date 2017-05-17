@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class HeavyAttackState : IEnemyState
 {
-    public void Execute()
-    {
-    }
+    private Enemy enemy;
+
+    private float heavyAttackTimer;
+    private float heavyAttackCoolDown = 4;
+    private bool canHeavyAttack = true;
 
     public void Enter(Enemy enemy)
     {
+        this.enemy = enemy;
+    }
+
+    public void Execute()
+    {
+        HeavyAttack();
     }
 
     public void Exit()
@@ -18,5 +26,22 @@ public class HeavyAttackState : IEnemyState
 
     public void OnTriggerEnter(Collider2D other)
     {
+    }
+
+    private void HeavyAttack()
+    {
+        if (canHeavyAttack)
+        {
+            canHeavyAttack = false;
+            enemy.CharaAnimator.SetTrigger("heavyAttack");
+        }
+        heavyAttackTimer += Time.deltaTime;
+
+        if (heavyAttackTimer >= heavyAttackCoolDown)
+        {
+            canHeavyAttack = true;
+            heavyAttackTimer = 0;
+            enemy.ChangeState(new IdleState());
+        }
     }
 }

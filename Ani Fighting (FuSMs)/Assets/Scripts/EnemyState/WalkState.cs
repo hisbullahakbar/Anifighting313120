@@ -18,6 +18,10 @@ public class WalkState : IEnemyState
         Debug.Log("Walking");
         Walk();
         enemy.Move();
+        if (Player.Instance.onGround && enemy.InNearRange)
+        {
+            enemy.ChangeState(new HeavyAttackState());
+        }
     }
 
     public void Exit()

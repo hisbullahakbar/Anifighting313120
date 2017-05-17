@@ -92,4 +92,24 @@ public class Enemy : Character {
     {
         currentState.OnTriggerEnter(other);
     }
+
+    public override IEnumerator TakeDamage()
+    {
+        health -= 10;
+
+        if (!IsDead)
+        {
+            CharaAnimator.SetTrigger("damage");
+        }
+        else
+        {
+            CharaAnimator.SetTrigger("die");
+            yield return null;
+        }
+    }
+
+    public override bool IsDead
+    {
+        get { return health <= 0; }
+    }
 }

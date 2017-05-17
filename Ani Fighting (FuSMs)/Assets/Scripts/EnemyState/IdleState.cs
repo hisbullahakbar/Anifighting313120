@@ -17,7 +17,11 @@ public class IdleState : IEnemyState
     {
         Debug.Log("idle");
         Idle();
-        if (Player.Instance.onGround && Player.Instance.attack)
+        if (Player.Instance.onGround && Player.Instance.attack && enemy.InNearRange)
+        {
+            enemy.ChangeState(new HeavyAttackState());
+        }
+        else if (Player.Instance.onGround && Player.Instance.attack && enemy.InFarRange)
         {
             enemy.ChangeState(new RangedAttackState());
         }

@@ -74,4 +74,14 @@ public class Player : Character {
 			base.CastingMagic (value);
 		}
 	}
+
+    public override bool IsDead
+    {
+        get { return health <= 0; }
+    }
+
+    public override IEnumerator TakeDamage()
+    {
+        yield return null;
+    }
 }

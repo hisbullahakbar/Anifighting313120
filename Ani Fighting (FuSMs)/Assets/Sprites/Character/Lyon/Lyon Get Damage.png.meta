@@ -1,9 +1,24 @@
 fileFormatVersion: 2
 guid: 98d7dd5844c556d4899ad6124ef5f9dd
-timeCreated: 1492614699
+timeCreated: 1494864508
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Lyon Get Damage_0
+    21300002: Lyon Get Damage_1
+    21300004: Lyon Get Damage_2
+    21300006: Lyon Get Damage_3
+    21300008: Lyon Get Damage_4
+    21300010: Lyon Get Damage_5
+    21300012: Lyon Get Damage_6
+    21300014: Lyon Get Damage_7
+    21300016: Lyon Get Damage_8
+    21300018: Lyon Get Damage_9
+    21300020: Lyon Get Damage_10
+    21300022: Lyon Get Damage_11
+    21300024: Lyon Get Damage_12
+    21300026: Lyon Get Damage_13
+    21300028: Lyon Get Damage_14
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -34,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +73,228 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Lyon Get Damage_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 324
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 321
+        width: 44
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 324
+        width: 73
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_3
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 321
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 306
+        width: 47
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 320
+        width: 43
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_6
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 20
+        width: 238
+        height: 245
+      alignment: 9
+      pivot: {x: 0.5582838, y: 0.61795557}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_7
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 20
+        width: 184
+        height: 267
+      alignment: 9
+      pivot: {x: 0.6507779, y: 0.5779301}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_8
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 20
+        width: 184
+        height: 271
+      alignment: 9
+      pivot: {x: 0.5565418, y: 0.57251436}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_9
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 20
+        width: 209
+        height: 252
+      alignment: 9
+      pivot: {x: 0.53871673, y: 0.6009174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_10
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 22
+        width: 271
+        height: 182
+      alignment: 9
+      pivot: {x: 0.59036446, y: 0.82506496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_11
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 33
+        width: 271
+        height: 139
+      alignment: 9
+      pivot: {x: 0.6689994, y: 1.0085186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_12
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 20
+        width: 274
+        height: 133
+      alignment: 9
+      pivot: {x: 0.68075985, y: 1.1199415}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_13
+      rect:
+        serializedVersion: 2
+        x: 2017
+        y: 13
+        width: 303
+        height: 87
+      alignment: 9
+      pivot: {x: 0.6919147, y: 1.7808782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Get Damage_14
+      rect:
+        serializedVersion: 2
+        x: 2372
+        y: 0
+        width: 228
+        height: 160
+      alignment: 9
+      pivot: {x: 0.6856154, y: 1.0698578}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
