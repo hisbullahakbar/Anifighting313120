@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Animations Behaviour\Lyon\AttackBehaviour.cs" />
      <Compile Include="Assets\Animations Behaviour\Lyon\CrouchBehaviour.cs" />
+     <Compile Include="Assets\Animations Behaviour\Lyon\DamageBehaviour.cs" />
      <Compile Include="Assets\Animations Behaviour\Lyon\GuardBehaviour.cs" />
      <Compile Include="Assets\Animations Behaviour\Lyon\IdleBehaviour.cs" />
      <Compile Include="Assets\Animations Behaviour\Lyon\JumpBehaviour.cs" />

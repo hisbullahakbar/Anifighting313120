@@ -59,8 +59,14 @@ public class Enemy : Character {
 
     void Update()
     {
-        currentState.Execute();
-        LookAtTarget();
+        if (!IsDead)
+        {
+            if (!takingDamage)
+            {
+                currentState.Execute();
+            }
+            LookAtTarget();
+        }
     }
 
     public void ChangeState(IEnemyState newState)
@@ -88,8 +94,9 @@ public class Enemy : Character {
         return facingRight ? Vector2.right : Vector2.left;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public override void OnTriggerEnter2D(Collider2D other)
     {
+        base.OnTriggerEnter2D(other);
         currentState.OnTriggerEnter(other);
     }
 

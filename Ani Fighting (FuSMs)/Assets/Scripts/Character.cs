@@ -40,6 +40,7 @@ public abstract class Character : MonoBehaviour
     public bool guard { get; set; }
     public bool crouch { get; set; }
     public float horizontal { get; set; }
+    public bool takingDamage { get; set; }
 
     public virtual void Start()
     {
@@ -52,6 +53,8 @@ public abstract class Character : MonoBehaviour
     {
 
     }
+
+    public abstract IEnumerator TakeDamage();
 
     public virtual void FixedUpdate()
     {
@@ -132,11 +135,9 @@ public abstract class Character : MonoBehaviour
         }
     }
 
-    public abstract IEnumerator TakeDamage();
-
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Knife")
+        if (other.tag == "Magic")
         {
             StartCoroutine(TakeDamage());
         }
