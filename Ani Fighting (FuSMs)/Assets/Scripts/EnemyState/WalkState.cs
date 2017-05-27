@@ -20,7 +20,7 @@ public class WalkState : IEnemyState
         enemy.Move();
         if (Player.Instance.onGround && enemy.InNearRange)
         {
-            enemy.ChangeState(new HeavyAttackState());
+            //enemy.ChangeState(new HeavyAttackState());
         }
     }
 

@@ -31,6 +31,11 @@ public abstract class Character : MonoBehaviour
     protected int health;
     public abstract bool IsDead { get; }
 
+    [SerializeField]
+    public EdgeCollider2D[] lightAttackCollider;
+
+    [SerializeField]
+    private List<string> damageSources;
 
     public Animator CharaAnimator { get; private set; }
     public Rigidbody2D charaRigidbody2D { get; set; }
@@ -47,11 +52,20 @@ public abstract class Character : MonoBehaviour
         CharaAnimator = GetComponent<Animator>();
         charaRigidbody2D = GetComponent<Rigidbody2D>();
         //facingRight = true;
+        for (int i = 0; i < lightAttackCollider.Length; i++)
+        {
+            setLightAttackCollider(i);
+        }
     }
 
     void Update()
     {
 
+    }
+
+    public void setLightAttackCollider(int i)
+    {
+        lightAttackCollider[i].enabled = !lightAttackCollider[i].enabled;
     }
 
     public abstract IEnumerator TakeDamage();
@@ -137,8 +151,14 @@ public abstract class Character : MonoBehaviour
 
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Magic")
+        if (damageSources.Contains(other.tag))
         {
+            //MASIH ADA BUG DIBAGIAN GETDAMAGE!!!
+            //1. get damage tidak keluar saat player memilih state aktif lain
+            //2. get damage selalu keluar dan masuk (tidak tentu) pada pergerakan serangan karakter
+                //dikarenakan hanya berdasarkan aktif tidak aktif dari method pada script ini 
+                //lightAttackCollider[i].enabled = !lightAttackCollider[i].enabled;
+                //belum ada get damage karna combo
             StartCoroutine(TakeDamage());
         }
     }

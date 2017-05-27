@@ -30,6 +30,11 @@ public class AttackBehaviour : StateMachineBehaviour {
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<Character>().attack = false;
+        for (int i = 0; i < animator.GetComponent<Character>().lightAttackCollider.Length; i++)
+        {
+            animator.GetComponent<Character>().setLightAttackCollider(i);
+        }
+
         animator.ResetTrigger("lightAttack");
         animator.ResetTrigger("rangedAttack");
         animator.ResetTrigger("heavyAttack");
