@@ -19,9 +19,11 @@ public class Player : Character {
 		charaRigidbody2D = GetComponent<Rigidbody2D> (); 
 	}
 
-	void Update(){
-		HandleInput ();
-	}
+    void Update()
+    {
+        //taking damage belum ditambahkan disini
+        HandleInput();
+    }
 	
 	public override void FixedUpdate () {
 		float horizontal = Input.GetAxis ("Horizontal");
@@ -75,6 +77,11 @@ public class Player : Character {
 		}
 	}
 
+    public override void OnTriggerEnter2D(Collider2D other)
+    {
+        base.OnTriggerEnter2D(other);
+    }
+
     public override bool IsDead
     {
         get { return health <= 0; }
@@ -82,6 +89,18 @@ public class Player : Character {
 
     public override IEnumerator TakeDamage()
     {
+        health -= 10;
+
+        if (!IsDead)
+        {
+            CharaAnimator.SetTrigger("damage");
+        }
+        else
+        {
+            CharaAnimator.SetLayerWeight(1, 0);
+            CharaAnimator.SetTrigger("die");
+        }
+
         yield return null;
     }
 }
