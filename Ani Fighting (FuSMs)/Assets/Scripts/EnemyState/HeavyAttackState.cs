@@ -42,6 +42,8 @@ public class HeavyAttackState : IEnemyState
             canHeavyAttack = true;
             heavyAttackTimer = 0;
             enemy.ChangeState(new IdleState());
+
+            enemy.CharaAnimator.SetBool("crouch", false); //if before of this state chara is crouch attack (heavy)
         }
     }
 }

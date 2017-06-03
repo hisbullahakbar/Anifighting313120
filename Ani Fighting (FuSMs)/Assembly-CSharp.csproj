@@ -46,20 +46,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Animations Behaviour\Lyon\AttackBehaviour.cs" />
-     <Compile Include="Assets\Animations Behaviour\Lyon\CrouchBehaviour.cs" />
-     <Compile Include="Assets\Animations Behaviour\Lyon\DamageBehaviour.cs" />
-     <Compile Include="Assets\Animations Behaviour\Lyon\GuardBehaviour.cs" />
-     <Compile Include="Assets\Animations Behaviour\Lyon\IdleBehaviour.cs" />
-     <Compile Include="Assets\Animations Behaviour\Lyon\JumpBehaviour.cs" />
-     <Compile Include="Assets\Animations Behaviour\Lyon\LandBehaviour.cs" />
+     <Compile Include="Assets\Animations Behaviour\Character\AttackBehaviour.cs" />
+     <Compile Include="Assets\Animations Behaviour\Character\CrouchBehaviour.cs" />
+     <Compile Include="Assets\Animations Behaviour\Character\DamageBehaviour.cs" />
+     <Compile Include="Assets\Animations Behaviour\Character\GuardBehaviour.cs" />
+     <Compile Include="Assets\Animations Behaviour\Character\IdleBehaviour.cs" />
+     <Compile Include="Assets\Animations Behaviour\Character\JumpBehaviour.cs" />
+     <Compile Include="Assets\Animations Behaviour\Character\LandBehaviour.cs" />
      <Compile Include="Assets\Scripts\Character.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySight.cs" />
+     <Compile Include="Assets\Scripts\EnemyState\CrouchState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\HeavyAttackState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\IEnemyState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\IdleState.cs" />
+     <Compile Include="Assets\Scripts\EnemyState\JumpState.cs" />
+     <Compile Include="Assets\Scripts\EnemyState\LightAttackState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\RangedAttackState.cs" />
+     <Compile Include="Assets\Scripts\EnemyState\WalkBackwardState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\WalkState.cs" />
      <Compile Include="Assets\Scripts\IgnoreCollision.cs" />
      <Compile Include="Assets\Scripts\MagicAttack.cs" />

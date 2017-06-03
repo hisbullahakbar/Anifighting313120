@@ -13,6 +13,9 @@ public class Player : Character {
 			return instance;
 		}
 	}
+    
+    [SerializeField]
+    private GameObject target;
 
 	public override void Start () {
 		base.Start();
@@ -22,34 +25,40 @@ public class Player : Character {
     void Update()
     {
         //taking damage belum ditambahkan disini
-        HandleInput();
+        if (!takingDamage && !IsDead)
+        {
+            HandleInput();
+        }
     }
-	
-	public override void FixedUpdate () {
-		float horizontal = Input.GetAxis ("Horizontal");
-        
-        base.horizontal = horizontal;
-        base.FixedUpdate();
 
-		Flip (horizontal);
-	}
+    public override void FixedUpdate()
+    {
+        if (!takingDamage && !IsDead)
+        {
+            float horizontal = Input.GetAxis("Horizontal");
+
+            base.horizontal = horizontal;
+            base.FixedUpdate();
+
+            LookAtTarget();
+            //Flip(horizontal);
+        }
+    }
 
 	private void HandleInput(){
 		if (Input.GetKeyDown (KeyCode.X)) {
 			CharaAnimator.SetTrigger ("jump");
 		}
 		if (Input.GetKeyDown (KeyCode.Z)) {
-			if (!crouch)
 				CharaAnimator.SetTrigger ("lightAttack");
-			else
-				CharaAnimator.SetTrigger ("crouchAttack");
 		}
 		if (Input.GetKeyDown (KeyCode.C)) {
 			CharaAnimator.SetTrigger ("rangedAttack");
 		}
 		if (Input.GetKeyDown (KeyCode.V)) {
-			CharaAnimator.SetTrigger ("heavyAttack");
+			CharaAnimator.SetTrigger ("heavyAttack"); //it's become crouch attack, if character is already in crouch position
 		}
+
 		if (Input.GetKeyDown (KeyCode.F)) {
 			CharaAnimator.SetBool ("guard", true);
 		} else if (Input.GetKeyUp (KeyCode.F)) {
@@ -65,11 +74,24 @@ public class Player : Character {
 		}
 	}
 
-	private void Flip(float horizontal){
+    private void LookAtTarget()
+    {
+        if (target != null)
+        {
+            float xDir = target.transform.position.x - transform.position.x;
+
+            if ((xDir < 0 && facingRight) || (xDir > 0 && !facingRight))
+            {
+                ChangeDirection();
+            }
+        }
+    }
+
+	/*private void Flip(float horizontal){
 		if ((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)) {
 			ChangeDirection ();	
 		}
-	}
+	}*/
 
 	public override void CastingMagic(int value){
 		if (((!onGround && value == 1) || (onGround && value == 0)) && !crouch) {

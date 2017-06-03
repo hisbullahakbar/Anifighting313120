@@ -44,6 +44,10 @@ public class Enemy : Character {
         ChangeState(new IdleState());
 	}
 
+    //use this method in class player for change flip function jobs..
+    //after it make move backward in this class and used it in StateClass WalkBackward
+    //and try it in idle state
+    //after all of step try to access jump attack, jump ranged attack, and crouch attack...
     private void LookAtTarget()
     {
         if (target != null)
@@ -93,6 +97,20 @@ public class Enemy : Character {
     {
         return facingRight ? Vector2.right : Vector2.left;
     }
+
+    public void MoveBackward()
+    {
+        if (!attack)
+        {
+            CharaAnimator.SetFloat("speed", 1f);
+            transform.Translate(GetDirection() * (movementSpeed * Time.deltaTime) * -1);
+        }
+    }
+
+    /*public Vector2 GetDirectionBackward()
+    {
+        return facingRight ? Vector2.left : Vector2.right;
+    }*/
 
     public override void OnTriggerEnter2D(Collider2D other)
     {
