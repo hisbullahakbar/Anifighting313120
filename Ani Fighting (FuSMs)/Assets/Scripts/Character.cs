@@ -46,6 +46,10 @@ public abstract class Character : MonoBehaviour
     public bool crouch { get; set; }
     public float horizontal { get; set; }
     public bool takingDamage { get; set; }
+    public int damageCounter { get; set; }
+
+    [SerializeField]
+    protected GameObject healthBar;
 
     public virtual void Start()
     {
@@ -56,11 +60,19 @@ public abstract class Character : MonoBehaviour
         {
             setAttackColliderFalse(i);
         }
+        damageCounter = 0;
+        healthBar.GetComponent<HealthBar>().SetMaximum(gameObject);
+        healthBar.GetComponent<HealthBar>().UpdateHealthBar(health);
     }
 
     void Update()
     {
 
+    }
+
+    public int getHealth()
+    {
+        return health;
     }
 
     public void setAttackColliderTrue(int i)

@@ -68,8 +68,8 @@ public class Enemy : Character {
             if (!takingDamage)
             {
                 currentState.Execute();
+                LookAtTarget();
             }
-            LookAtTarget();
         }
     }
 
@@ -121,10 +121,20 @@ public class Enemy : Character {
     public override IEnumerator TakeDamage()
     {
         health -= 10;
-
+        healthBar.GetComponent<HealthBar>().UpdateHealthBar(health);
+        
         if (!IsDead)
         {
             CharaAnimator.SetTrigger("damage");
+            if (damageCounter < 2)
+            {
+                damageCounter += 1;
+            }
+            else
+            {
+                damageCounter = 0;
+            }
+            CharaAnimator.SetInteger("damageCounter", damageCounter);
         }
         else
         {

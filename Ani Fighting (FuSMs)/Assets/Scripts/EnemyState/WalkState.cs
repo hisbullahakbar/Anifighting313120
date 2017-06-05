@@ -6,7 +6,7 @@ public class WalkState : IEnemyState
 {
     private Enemy enemy;
     private float walkTimer;
-    private float walkDuration = 10f;
+    private float walkDuration = 7f;
 
     public void Enter(Enemy enemy)
     {
@@ -20,7 +20,14 @@ public class WalkState : IEnemyState
         enemy.Move();
         if (Player.Instance.onGround && enemy.InNearRange)
         {
-            //enemy.ChangeState(new HeavyAttackState());
+            if (Player.Instance.attack)
+            {
+                enemy.ChangeState(new WalkBackwardState());
+            }
+            else
+            {
+                enemy.ChangeState(new HeavyAttackState());
+            }
         }
     }
 

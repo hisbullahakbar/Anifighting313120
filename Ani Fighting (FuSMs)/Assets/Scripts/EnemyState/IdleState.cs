@@ -17,13 +17,9 @@ public class IdleState : IEnemyState
     {
         Debug.Log("idle");
         Idle();
-        if (Player.Instance.onGround && Player.Instance.attack && enemy.InNearRange)
+        if (Player.Instance.onGround && Player.Instance.attack && enemy.InFarRange)
         {
             enemy.ChangeState(new JumpState());
-        }
-        else if (Player.Instance.onGround && Player.Instance.attack && enemy.InFarRange)
-        {
-            enemy.ChangeState(new CrouchState());
         }
     }
 
@@ -44,7 +40,14 @@ public class IdleState : IEnemyState
         idleTimer += Time.deltaTime;
         if (idleTimer >= idleDuration)
         {
-            //enemy.ChangeState(new WalkState());
+            if (Player.Instance.onGround && enemy.InNearRange)
+            {
+                enemy.ChangeState(new LightAttackState());
+            }
+            else
+            {
+                enemy.ChangeState(new WalkState());
+            }
         }
     }
 }
