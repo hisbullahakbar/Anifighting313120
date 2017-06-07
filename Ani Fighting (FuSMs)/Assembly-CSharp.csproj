@@ -54,6 +54,7 @@
      <Compile Include="Assets\Animations Behaviour\Character\JumpBehaviour.cs" />
      <Compile Include="Assets\Animations Behaviour\Character\LandBehaviour.cs" />
      <Compile Include="Assets\Scripts\Character.cs" />
+     <Compile Include="Assets\Scripts\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySight.cs" />
      <Compile Include="Assets\Scripts\EnemyState\CrouchState.cs" />
