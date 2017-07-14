@@ -8,4 +8,5 @@ public interface IEnemyState
     void Execute();
     void Exit();
     void OnTriggerEnter(Collider2D other);
+    string getStateName();
 }

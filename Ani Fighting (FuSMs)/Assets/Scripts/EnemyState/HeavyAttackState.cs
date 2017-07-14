@@ -10,6 +10,11 @@ public class HeavyAttackState : IEnemyState
     private float heavyAttackCoolDown = 4;
     private bool canHeavyAttack = true;
 
+    public string getStateName()
+    {
+        return "heavyAttack";
+    }
+
     public void Enter(Enemy enemy)
     {
         this.enemy = enemy;

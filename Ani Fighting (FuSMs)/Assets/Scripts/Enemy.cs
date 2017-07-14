@@ -5,15 +5,41 @@ using UnityEngine;
 public class Enemy : Character {
 
     private IEnemyState currentState;
+    public IEnemyState CurrentState
+    {
+        get
+        {
+            return currentState;
+        }
+    }
 
     private GameObject target;
+    public GameObject Target
+    {
+        get
+        {
+            if (target == null)
+            {
+                target = GameObject.FindObjectOfType<Player>().gameObject;
+            }
+            return target;
+        }
+    }
 
     [SerializeField]
     private float nearRange;
+    public float NearRange
+    {
+        get { return nearRange; }
+    }
     [SerializeField]
     private float farRange;
+    public float FarRange
+    {
+        get { return farRange; }
+    }
 
-    public bool InNearRange
+   /* public bool InNearRange
     {
         get
         {
@@ -25,6 +51,7 @@ public class Enemy : Character {
         }
     }
 
+
     public bool InFarRange
     {
         get
@@ -35,7 +62,7 @@ public class Enemy : Character {
             }
             return false;
         }
-    }
+    }*/
 
 	public override void Start () {
         base.Start();
@@ -70,7 +97,8 @@ public class Enemy : Character {
                 currentState.Execute();
                 LookAtTarget();
             }
-        }
+        } 
+        Debug.Log(Player.Instance.Target.GetComponent<Enemy>().CurrentState.getStateName());
     }
 
     public void ChangeState(IEnemyState newState)

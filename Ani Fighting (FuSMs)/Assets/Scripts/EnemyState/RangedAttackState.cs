@@ -10,6 +10,11 @@ public class RangedAttackState : IEnemyState
     private float castMagicCoolDown = 4;
     private bool canCastMagic = true;
 
+    public string getStateName()
+    {
+        return "rangedAttack";
+    }
+
     public void Enter(Enemy enemy)
     {
         this.enemy = enemy;

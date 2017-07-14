@@ -6,7 +6,12 @@ public class IdleState : IEnemyState
 {
     private Enemy enemy;
     private float idleTimer;
-    private float idleDuration = 5f;
+    private float idleDuration = 100f; //5f
+
+    public string getStateName()
+    {
+        return "idle";
+    }
 
     public void Enter(Enemy enemy)
     {
@@ -17,10 +22,10 @@ public class IdleState : IEnemyState
     {
         Debug.Log("idle");
         Idle();
-        if (Player.Instance.onGround && Player.Instance.attack && enemy.InFarRange)
-        {
+        //if (Player.Instance.onGround && Player.Instance.attack && enemy.InFarRange)
+        //{
             enemy.ChangeState(new JumpState());
-        }
+        //}
     }
 
     public void Exit()
@@ -40,14 +45,14 @@ public class IdleState : IEnemyState
         idleTimer += Time.deltaTime;
         if (idleTimer >= idleDuration)
         {
-            if (Player.Instance.onGround && enemy.InNearRange)
-            {
+            //if (Player.Instance.onGround && enemy.InNearRange)
+            //{
                 enemy.ChangeState(new LightAttackState());
-            }
-            else
-            {
+            //}
+            //else
+            //{
                 enemy.ChangeState(new WalkState());
-            }
+            //}
         }
     }
 }
