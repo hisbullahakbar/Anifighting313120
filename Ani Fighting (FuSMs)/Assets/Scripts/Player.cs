@@ -48,23 +48,64 @@ public class Player : Character {
 	private void HandleInput(){
 		if (Input.GetKeyDown (KeyCode.X)) {
 			CharaAnimator.SetTrigger ("jump");
-		}
-		if (Input.GetKeyDown (KeyCode.Z)) {
-				CharaAnimator.SetTrigger ("lightAttack");
-		}
-		if (Input.GetKeyDown (KeyCode.C)) {
-			CharaAnimator.SetTrigger ("rangedAttack");
-		}
-		if (Input.GetKeyDown (KeyCode.V)) {
-			CharaAnimator.SetTrigger ("heavyAttack"); //it's become crouch attack, if character is already in crouch position
-		}
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            CharaAnimator.SetTrigger("lightAttack");
+            if (!jump)
+            {
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.lightAttack).addLaunchedMovement(1);
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.middleDirection).addLaunchedMovement(1);
+            }
+            else
+            {
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.lightAttack).addLaunchedMovement(1);
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.upDirection).addLaunchedMovement(1);
+            }
 
+            PlayerInputManager.instance.getTotalInput().addLaunchedMovement(1);
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            CharaAnimator.SetTrigger("rangedAttack");
+            if (!jump)
+            {
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.rangedAttack).addLaunchedMovement(1);
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.middleDirection).addLaunchedMovement(1);
+            }
+            else
+            {
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.rangedAttack).addLaunchedMovement(1);
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.upDirection).addLaunchedMovement(1);
+            }
+
+            PlayerInputManager.instance.getTotalInput().addLaunchedMovement(1);
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            CharaAnimator.SetTrigger("heavyAttack"); //it's become crouch attack, if character is already in crouch position
+            if (!crouch)
+            {
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.heavyAttack).addLaunchedMovement(1);
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.middleDirection).addLaunchedMovement(1);
+            }
+            else
+            {
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.heavyAttack).addLaunchedMovement(1);
+                PlayerInputManager.instance.getCountMovement(MovementType.playerCounter.bottomDirection).addLaunchedMovement(1);
+            }
+
+            PlayerInputManager.instance.getTotalInput().addLaunchedMovement(1);
+        }
+
+        //---------------delete this because this fitur is unused-------------------
 		if (Input.GetKeyDown (KeyCode.F)) {
 			CharaAnimator.SetBool ("guard", true);
 		} else if (Input.GetKeyUp (KeyCode.F)) {
 			CharaAnimator.SetBool ("guard", false);
 		}
-			
+		//--------------------------------------------------------------------------	
+
 		if (Input.GetKeyDown (KeyCode.DownArrow)) {
 			if (onGround && !jump) {
 				CharaAnimator.SetBool ("crouch", true);
