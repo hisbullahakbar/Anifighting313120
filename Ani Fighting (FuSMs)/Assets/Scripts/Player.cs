@@ -59,8 +59,8 @@ public class Player : Character {
 		if (Input.GetKeyDown (KeyCode.X)) {
 			CharaAnimator.SetTrigger ("jump");
 
-            FuzzyStateMachines.Instance.initiateFuSMs();
-            FuzzyStateMachines.Instance.runFuSMs();
+            //FuzzyStateMachines.Instance.initiateFuSMs();
+            //FuzzyStateMachines.Instance.runFuSMs();
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
@@ -78,8 +78,8 @@ public class Player : Character {
 
             PlayerInputManager.instance.getTotalInput().addLaunchedMovement(1);
 
-            FuzzyStateMachines.Instance.initiateFuSMs();
-            FuzzyStateMachines.Instance.runFuSMs();
+            //FuzzyStateMachines.Instance.initiateFuSMs();
+            //FuzzyStateMachines.Instance.runFuSMs();
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
@@ -97,8 +97,8 @@ public class Player : Character {
 
             PlayerInputManager.instance.getTotalInput().addLaunchedMovement(1);
 
-            FuzzyStateMachines.Instance.initiateFuSMs();
-            FuzzyStateMachines.Instance.runFuSMs();
+            //FuzzyStateMachines.Instance.initiateFuSMs();
+            //FuzzyStateMachines.Instance.runFuSMs();
         }
         if (Input.GetKeyDown(KeyCode.V))
         {
@@ -116,8 +116,8 @@ public class Player : Character {
 
             PlayerInputManager.instance.getTotalInput().addLaunchedMovement(1);
 
-            FuzzyStateMachines.Instance.initiateFuSMs();
-            FuzzyStateMachines.Instance.runFuSMs();
+            //FuzzyStateMachines.Instance.initiateFuSMs();
+            //FuzzyStateMachines.Instance.runFuSMs();
         }
 
         //---------------delete this because this fitur is unused-------------------
@@ -133,8 +133,8 @@ public class Player : Character {
 				CharaAnimator.SetBool ("crouch", true);
 			}
 
-            FuzzyStateMachines.Instance.initiateFuSMs();
-            FuzzyStateMachines.Instance.runFuSMs();
+            //FuzzyStateMachines.Instance.initiateFuSMs();
+            //FuzzyStateMachines.Instance.runFuSMs();
 		} else if (Input.GetKeyUp (KeyCode.DownArrow)) {
 			CharaAnimator.SetBool ("crouch", false);
 		}

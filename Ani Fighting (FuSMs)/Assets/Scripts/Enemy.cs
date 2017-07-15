@@ -39,7 +39,7 @@ public class Enemy : Character {
         get { return farRange; }
     }
 
-   /* public bool InNearRange
+   public bool InNearRange
     {
         get
         {
@@ -62,7 +62,7 @@ public class Enemy : Character {
             }
             return false;
         }
-    }*/
+    }
 
 	public override void Start () {
         base.Start();
@@ -98,7 +98,7 @@ public class Enemy : Character {
                 LookAtTarget();
             }
         } 
-        Debug.Log(Player.Instance.Target.GetComponent<Enemy>().CurrentState.getStateName());
+        //Debug.Log(Player.Instance.Target.GetComponent<Enemy>().CurrentState.getStateName());
     }
 
     public void ChangeState(IEnemyState newState)
