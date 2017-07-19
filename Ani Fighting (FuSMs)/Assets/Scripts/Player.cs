@@ -34,24 +34,33 @@ public class Player : Character {
 
     void Update()
     {
-        //taking damage belum ditambahkan disini
-        if (!takingDamage && !IsDead)
+        if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.battle)
         {
-            HandleInput();
+            if (!takingDamage && !IsDead)
+            {
+                HandleInput();
+            }
+        }
+        else if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.beginingPose)
+        {
+
         }
     }
 
     public override void FixedUpdate()
     {
-        if (!takingDamage && !IsDead)
+        if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.battle)
         {
-            float horizontal = Input.GetAxis("Horizontal");
+            if (!takingDamage && !IsDead)
+            {
+                float horizontal = Input.GetAxis("Horizontal");
 
-            base.horizontal = horizontal;
-            base.FixedUpdate();
+                base.horizontal = horizontal;
+                base.FixedUpdate();
 
-            LookAtTarget();
-            //Flip(horizontal);
+                LookAtTarget();
+                //Flip(horizontal);
+            }
         }
     }
 

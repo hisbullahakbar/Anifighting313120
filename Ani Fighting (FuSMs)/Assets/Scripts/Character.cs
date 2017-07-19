@@ -118,6 +118,11 @@ public abstract class Character : MonoBehaviour
         transform.localScale = new Vector3(transform.localScale.x * -1, 1, 1);
     }
 
+    public void beginingPoseExit()
+    {
+        CharaAnimator.SetBool("beginingPose", false);
+    }
+
     public virtual void CastingMagic(int value)
     {
         if (facingRight)

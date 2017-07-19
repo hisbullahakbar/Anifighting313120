@@ -1,9 +1,24 @@
 fileFormatVersion: 2
 guid: 1db73ae3b85b0154cbd67890ab952cc9
-timeCreated: 1494325732
+timeCreated: 1500478335
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Erza Begining Pose_0
+    21300002: Erza Begining Pose_1
+    21300004: Erza Begining Pose_2
+    21300006: Erza Begining Pose_3
+    21300008: Erza Begining Pose_4
+    21300010: Erza Begining Pose_5
+    21300012: Erza Begining Pose_6
+    21300014: Erza Begining Pose_7
+    21300016: Erza Begining Pose_8
+    21300018: Erza Begining Pose_9
+    21300020: Erza Begining Pose_10
+    21300022: Erza Begining Pose_11
+    21300024: Erza Begining Pose_12
+    21300026: Erza Begining Pose_13
+    21300028: Erza Begining Pose_14
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -84,7 +99,202 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Erza Begining Pose_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 358
+        width: 49
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 407
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_2
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 407
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 356
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_4
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 340
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_5
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 358
+        width: 21
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_6
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 358
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 358
+        width: 21
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 358
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 340
+        width: 45
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 26
+        width: 105
+        height: 266
+      alignment: 9
+      pivot: {x: 0.4867618, y: 0.55732745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_11
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 26
+        width: 93
+        height: 266
+      alignment: 9
+      pivot: {x: 0.48461258, y: 0.5573276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_12
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 26
+        width: 94
+        height: 266
+      alignment: 9
+      pivot: {x: 0.37820986, y: 0.5625535}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_13
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 26
+        width: 119
+        height: 262
+      alignment: 9
+      pivot: {x: 0.7113065, y: 0.5800501}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Begining Pose_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 4
+        width: 128
+        height: 281
+      alignment: 9
+      pivot: {x: 0.701879, y: 0.62017983}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

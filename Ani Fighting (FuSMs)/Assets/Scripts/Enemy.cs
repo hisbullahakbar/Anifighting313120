@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Character {
+public class Enemy : Character
+{
 
     private IEnemyState currentState;
     public IEnemyState CurrentState
@@ -39,7 +40,7 @@ public class Enemy : Character {
         get { return farRange; }
     }
 
-   public bool InNearRange
+    public bool InNearRange
     {
         get
         {
@@ -64,12 +65,13 @@ public class Enemy : Character {
         }
     }
 
-	public override void Start () {
+    public override void Start()
+    {
         base.Start();
         target = Player.Instance.gameObject;
-        
+
         ChangeState(new IdleState());
-	}
+    }
 
     //use this method in class player for change flip function jobs..
     //after it make move backward in this class and used it in StateClass WalkBackward
@@ -90,15 +92,22 @@ public class Enemy : Character {
 
     void Update()
     {
-        if (!IsDead)
+        if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.battle)
         {
-            if (!takingDamage)
+            if (!IsDead)
             {
-                currentState.Execute();
-                LookAtTarget();
+                if (!takingDamage)
+                {
+                    currentState.Execute();
+                    LookAtTarget();
+                }
             }
-        } 
-        //Debug.Log(Player.Instance.Target.GetComponent<Enemy>().CurrentState.getStateName());
+            //Debug.Log(Player.Instance.Target.GetComponent<Enemy>().CurrentState.getStateName());
+        }
+        else if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.beginingPose)
+        {
+
+        }
     }
 
     public void ChangeState(IEnemyState newState)
@@ -150,7 +159,7 @@ public class Enemy : Character {
     {
         health -= 10;
         healthBar.GetComponent<HealthBar>().UpdateHealthBar(health);
-        
+
         if (!IsDead)
         {
             CharaAnimator.SetTrigger("damage");
