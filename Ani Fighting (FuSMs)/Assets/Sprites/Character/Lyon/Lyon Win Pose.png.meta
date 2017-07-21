@@ -1,9 +1,26 @@
 fileFormatVersion: 2
 guid: 9e19ab55ae047e6418f75694a7d4ace0
-timeCreated: 1492614700
+timeCreated: 1500542944
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Lyon Win Pose_0
+    21300002: Lyon Win Pose_1
+    21300004: Lyon Win Pose_2
+    21300006: Lyon Win Pose_3
+    21300008: Lyon Win Pose_4
+    21300010: Lyon Win Pose_5
+    21300012: Lyon Win Pose_6
+    21300014: Lyon Win Pose_7
+    21300016: Lyon Win Pose_8
+    21300018: Lyon Win Pose_9
+    21300020: Lyon Win Pose_10
+    21300022: Lyon Win Pose_11
+    21300024: Lyon Win Pose_12
+    21300026: Lyon Win Pose_13
+    21300028: Lyon Win Pose_14
+    21300030: Lyon Win Pose_15
+    21300032: Lyon Win Pose_16
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -34,7 +51,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +75,254 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Lyon Win Pose_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 359
+        width: 80
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 407
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_2
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 357
+        width: 42
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_3
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 357
+        width: 29
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_4
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 357
+        width: 29
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 359
+        width: 22
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_6
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 359
+        width: 46
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_7
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 357
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_8
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 357
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 16
+        width: 160
+        height: 285
+      alignment: 9
+      pivot: {x: 0.72747993, y: 0.5744965}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_10
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 16
+        width: 185
+        height: 285
+      alignment: 9
+      pivot: {x: 0.75221676, y: 0.5747415}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_11
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 16
+        width: 241
+        height: 285
+      alignment: 9
+      pivot: {x: 0.83484745, y: 0.5753845}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_12
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 16
+        width: 219
+        height: 285
+      alignment: 9
+      pivot: {x: 0.77174777, y: 0.5746171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_13
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 16
+        width: 175
+        height: 285
+      alignment: 9
+      pivot: {x: 0.73703545, y: 0.57277405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_14
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 16
+        width: 147
+        height: 288
+      alignment: 9
+      pivot: {x: 0.6848593, y: 0.56828344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_15
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 16
+        width: 144
+        height: 288
+      alignment: 9
+      pivot: {x: 0.7205387, y: 0.5683671}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Lyon Win Pose_16
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 16
+        width: 150
+        height: 285
+      alignment: 9
+      pivot: {x: 0.6981348, y: 0.5754919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

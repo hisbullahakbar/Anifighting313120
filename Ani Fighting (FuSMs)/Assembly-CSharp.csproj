@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\BattleSceneManager.cs" />
      <Compile Include="Assets\Scripts\CharaBattleInfoManager.cs" />
      <Compile Include="Assets\Scripts\Character.cs" />
+     <Compile Include="Assets\Scripts\CharacterMugshoot.cs" />
      <Compile Include="Assets\Scripts\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Scripts\EnemySight.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Scripts\PlayerInputManager.cs" />
      <Compile Include="Assets\Scripts\Rule.cs" />
      <Compile Include="Assets\Scripts\SpritesAutoSlider.cs" />
+     <Compile Include="Assets\Scripts\WinLoseManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

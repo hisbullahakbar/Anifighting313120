@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleSceneManager : MonoBehaviour {
 
@@ -41,12 +42,20 @@ public class BattleSceneManager : MonoBehaviour {
         }
     }
 
-    bool isAlreadyBeginingPose;
+    #region openingBattle
+    bool isAlreadyBeginingPose, isFightIconDestroyed;
+    [SerializeField]
+    GameObject fightIcon;
+    #endregion
+
+    [SerializeField]
+    Text textWinLoseState;
 
     void Start()
     {
         state = BattleSceneState.characterInfo;
         isAlreadyBeginingPose = false;
+        isFightIconDestroyed = false;
     }
 	
 	void Update () {
@@ -64,14 +73,40 @@ public class BattleSceneManager : MonoBehaviour {
                 {
                     if (!Player.Instance.CharaAnimator.GetBool("beginingPose")
                         && !Player.Instance.Target.GetComponent<Enemy>().CharaAnimator.GetBool("beginingPose"))
+                    {
                         state = BattleSceneState.battle;
+                        fightIcon.GetComponent<SpriteRenderer>().enabled = true;
+                    }
                 }
                 break;
-            case BattleSceneState.battle: //2
+            case BattleSceneState.battle: //2\
+
+                if (!isFightIconDestroyed)
+                {
+                    if (fightIcon.transform.position.y < 1f)
+                        fightIcon.transform.position = Vector3.MoveTowards(fightIcon.transform.position,
+                            new Vector3(0, 1f, 0), 0.3f);
+                    else
+                    {
+                        Destroy(fightIcon);
+                        isFightIconDestroyed = true;
+                    }
+                }
                 break;
             case BattleSceneState.battlePause: //3
                 break;
             case BattleSceneState.winLosePose: //4
+                textWinLoseState.GetComponent<Text>().enabled = true;
+                if (WinLoseManager.Instance.isPlayer1Win())
+                {
+                    textWinLoseState.text = "Player 1 Win";
+                    Player.Instance.CharaAnimator.SetBool("winPose", true);
+                }
+                else if (WinLoseManager.Instance.isPlayer2Win())
+                {
+                    textWinLoseState.text = "Player 2 Win";
+                    Player.Instance.Target.GetComponent<Enemy>().CharaAnimator.SetBool("winPose", true);
+                }
                 break;
             case BattleSceneState.winLoseInfo: //5
                 break;

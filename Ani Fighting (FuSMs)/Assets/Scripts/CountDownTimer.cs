@@ -10,14 +10,21 @@ public class CountDownTimer : MonoBehaviour {
 
     int timer;
     bool isTimerActive;
+    
+    [SerializeField]
+    bool isTimeBattleMode;
 
     [SerializeField]
     private Text timerText;
 
-	void Start () {
+    void Start()
+    {
         StartingTimer();
         UpdateUI();
-        InvokeRepeating("UpdateTimer", 1.0f, 1.0f);
+        if (isTimeBattleMode)
+        {
+            InvokeRepeating("UpdateTimer", 1.0f, 1.0f);
+        }
     }
 
     void UpdateTimer()
@@ -33,6 +40,16 @@ public class CountDownTimer : MonoBehaviour {
                 }
                 else
                 {
+                    if (Player.Instance.getHealth() > Player.Instance.Target.GetComponent<Enemy>().getHealth())
+                    {
+                        WinLoseManager.Instance.setWinLoseState(WinLoseManager.WinloseState.player1Win);
+                        BattleSceneManager.Instance.State = BattleSceneManager.BattleSceneState.winLosePose;
+                    }
+                    else
+                    {
+                        WinLoseManager.Instance.setWinLoseState(WinLoseManager.WinloseState.player2Win);
+                        BattleSceneManager.Instance.State = BattleSceneManager.BattleSceneState.winLosePose;
+                    }
                     isTimerActive = false;
                 }
             }

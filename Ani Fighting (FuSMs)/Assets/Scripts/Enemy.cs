@@ -104,10 +104,10 @@ public class Enemy : Character
             }
             //Debug.Log(Player.Instance.Target.GetComponent<Enemy>().CurrentState.getStateName());
         }
-        else if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.beginingPose)
-        {
+        //else if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.beginingPose)
+        //{
 
-        }
+        //}
     }
 
     public void ChangeState(IEnemyState newState)
@@ -117,7 +117,6 @@ public class Enemy : Character
             currentState.Exit();
         }
         currentState = newState;
-
         currentState.Enter(this);
     }
 
@@ -176,6 +175,8 @@ public class Enemy : Character
         else
         {
             CharaAnimator.SetTrigger("die");
+            WinLoseManager.Instance.setWinLoseState(WinLoseManager.WinloseState.player1Win);
+            BattleSceneManager.Instance.State = BattleSceneManager.BattleSceneState.winLosePose;
             yield return null;
         }
     }

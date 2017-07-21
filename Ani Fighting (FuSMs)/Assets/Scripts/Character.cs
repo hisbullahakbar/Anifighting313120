@@ -51,10 +51,14 @@ public abstract class Character : MonoBehaviour
     [SerializeField]
     protected GameObject healthBar;
 
+    [SerializeField]
+    protected CharacterMugshoot mugshoot;
+
     public virtual void Start()
     {
         CharaAnimator = GetComponent<Animator>();
         charaRigidbody2D = GetComponent<Rigidbody2D>();
+        mugshoot = GetComponent<CharacterMugshoot>();
         //facingRight = true;
         for (int i = 0; i < attackCollider.Length; i++)
         {

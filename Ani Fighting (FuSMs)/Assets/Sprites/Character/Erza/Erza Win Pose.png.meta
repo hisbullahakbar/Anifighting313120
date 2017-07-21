@@ -1,9 +1,30 @@
 fileFormatVersion: 2
 guid: 1424f5b26af90244dbc34d3595c3f38b
-timeCreated: 1494325727
+timeCreated: 1500544167
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Erza Win Pose_0
+    21300002: Erza Win Pose_1
+    21300004: Erza Win Pose_2
+    21300006: Erza Win Pose_3
+    21300008: Erza Win Pose_4
+    21300010: Erza Win Pose_5
+    21300012: Erza Win Pose_6
+    21300014: Erza Win Pose_7
+    21300016: Erza Win Pose_8
+    21300018: Erza Win Pose_3
+    21300020: Erza Win Pose_4
+    21300022: Erza Win Pose_5
+    21300024: Erza Win Pose_6
+    21300026: Erza Win Pose_7
+    21300028: Erza Win Pose_8
+    21300030: Erza Win Pose_2
+    21300032: Erza Win Pose_9
+    21300034: Erza Win Pose_1
+    21300036: Erza Win Pose_10
+    21300038: Erza Win Pose_11
+    21300040: Erza Win Pose_12
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -84,7 +105,163 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Erza Win Pose_3
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 2
+        width: 247
+        height: 324
+      alignment: 9
+      pivot: {x: 0.5037743, y: 0.51733625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_4
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 2
+        width: 237
+        height: 312
+      alignment: 9
+      pivot: {x: 0.5212116, y: 0.5281976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_5
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 2
+        width: 206
+        height: 306
+      alignment: 9
+      pivot: {x: 0.504564, y: 0.53493494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_6
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 2
+        width: 209
+        height: 300
+      alignment: 9
+      pivot: {x: 0.51989394, y: 0.537619}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_7
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 2
+        width: 193
+        height: 300
+      alignment: 9
+      pivot: {x: 0.47766808, y: 0.5574662}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_8
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 2
+        width: 215
+        height: 294
+      alignment: 9
+      pivot: {x: 0.5113134, y: 0.60755825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_2
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 2
+        width: 252
+        height: 329
+      alignment: 9
+      pivot: {x: 0.53015924, y: 0.48374265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_9
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 2
+        width: 205
+        height: 284
+      alignment: 9
+      pivot: {x: 0.48813358, y: 0.6199108}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 143
+        height: 266
+      alignment: 9
+      pivot: {x: 0.7346063, y: 0.5980955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_10
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 2
+        width: 215
+        height: 247
+      alignment: 9
+      pivot: {x: 0.5, y: 0.56473196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_11
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 2
+        width: 185
+        height: 259
+      alignment: 9
+      pivot: {x: 0.40298775, y: 0.5554361}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Erza Win Pose_12
+      rect:
+        serializedVersion: 2
+        x: 2531
+        y: 2
+        width: 181
+        height: 268
+      alignment: 9
+      pivot: {x: 0.42067453, y: 0.5736649}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

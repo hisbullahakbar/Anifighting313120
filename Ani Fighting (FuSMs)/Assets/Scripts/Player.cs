@@ -41,10 +41,10 @@ public class Player : Character {
                 HandleInput();
             }
         }
-        else if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.beginingPose)
-        {
+        //else if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.beginingPose)
+        //{
 
-        }
+        //}
     }
 
     public override void FixedUpdate()
@@ -145,7 +145,7 @@ public class Player : Character {
             //FuzzyStateMachines.Instance.initiateFuSMs();
             //FuzzyStateMachines.Instance.runFuSMs();
 		} else if (Input.GetKeyUp (KeyCode.DownArrow)) {
-			CharaAnimator.SetBool ("crouch", false);
+            CharaAnimator.SetBool("crouch", false);
 		}
 	}
 
@@ -206,6 +206,8 @@ public class Player : Character {
         {
             CharaAnimator.SetLayerWeight(1, 0);
             CharaAnimator.SetTrigger("die");
+            WinLoseManager.Instance.setWinLoseState(WinLoseManager.WinloseState.player2Win);
+            BattleSceneManager.Instance.State = BattleSceneManager.BattleSceneState.winLosePose;
         }
 
         yield return null;
