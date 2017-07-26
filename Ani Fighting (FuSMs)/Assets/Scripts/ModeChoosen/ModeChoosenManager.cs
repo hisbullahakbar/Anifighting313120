@@ -10,9 +10,14 @@ public class ModeChoosenManager : MonoBehaviour {
 	GameObject[] modesText;
 
 	int selectedMode,previousMode;
+	public static int statSelectedMode {
+		set;
+		get;
+	}
 
 	void Start () {
 		selectedMode = -1;	
+		statSelectedMode = -1;
 	}
 	
 	void Update () {
@@ -26,12 +31,23 @@ public class ModeChoosenManager : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.RightArrow)) {
 			previousMode = selectedMode;
 			selectedMode = (selectedMode + 1) % modesLogo.Length;
-		}
-		else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+			statSelectedMode = selectedMode;
+		} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			previousMode = selectedMode;
 			selectedMode -= 1;
 			if (selectedMode < 0)
 				selectedMode = modesLogo.Length - 1;
+			statSelectedMode = selectedMode;
+		}
+
+		if (Input.GetKeyDown (KeyCode.Z)) {
+			if (selectedMode != -1) {
+				JumpToOtherScene.quickGoToScene ("characterchoosen");
+			}
+		}
+
+		if (Input.GetKeyDown (KeyCode.X)) {
+			JumpToOtherScene.quickGoToScene ("mainmenu");
 		}
 	}
 
@@ -45,13 +61,5 @@ public class ModeChoosenManager : MonoBehaviour {
 			modesText [previousMode].transform.position = Vector3.MoveTowards (modesText [previousMode].transform.position,
 				new Vector3 (modesLogo [previousMode].transform.position.x, -2.974989f, -1f), 0.3f);
 		}
-		//StartCoroutine (setSelectingMode ());
-	}
-
-	IEnumerator setSelectingMode(){
-		yield return new WaitForSeconds (2f);
-		modesText [selectedMode].transform.position = Vector3.MoveTowards (modesText [selectedMode].transform.position,
-			new Vector3 (modesLogo [selectedMode].transform.position.x, -0.455f, 
-				modesText [selectedMode].transform.position.z), 0.0001f);
 	}
 }

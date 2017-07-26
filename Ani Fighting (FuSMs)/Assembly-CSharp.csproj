@@ -54,6 +54,7 @@
      <Compile Include="Assets\Animations Behaviour\Character\JumpBehaviour.cs" />
      <Compile Include="Assets\Animations Behaviour\Character\LandBehaviour.cs" />
      <Compile Include="Assets\Scripts\CharacterChoosen\CharacterChoosenManager.cs" />
+     <Compile Include="Assets\Scripts\CharacterChoosen\CharacterLockSystem.cs" />
      <Compile Include="Assets\Scripts\EnemyState\CrouchState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\HeavyAttackState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\IEnemyState.cs" />

@@ -11,7 +11,6 @@ public class CountDownTimer : MonoBehaviour {
     int timer;
     bool isTimerActive;
     
-    [SerializeField]
     bool isTimeBattleMode;
 
     [SerializeField]
@@ -21,6 +20,13 @@ public class CountDownTimer : MonoBehaviour {
     {
         StartingTimer();
         UpdateUI();
+		if (ModeChoosenManager.statSelectedMode == 0) {
+			isTimeBattleMode = true;
+		} else {
+			isTimeBattleMode = false;
+			timerText.text = "00";
+		}
+
         if (isTimeBattleMode)
         {
             InvokeRepeating("UpdateTimer", 1.0f, 1.0f);
