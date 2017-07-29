@@ -11,6 +11,9 @@ public class CharacterChoosenManager : MonoBehaviour {
 	[SerializeField]
 	GameObject[] playerIcon;
 
+	[SerializeField]
+	SoundManager soundManager;
+
 	int selectedCharacter;
 	public static int statSelectedCharacter1 {
 		set;
@@ -56,6 +59,7 @@ public class CharacterChoosenManager : MonoBehaviour {
 				if (selectedCharacter == statSelectedCharacter1) {
 					selectedCharacter = (selectedCharacter + 1) % charactersLogo.Length;
 				}
+				soundManager.effectSoundPlay (1);
 			} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 				selectedCharacter -= 1;
 				if (selectedCharacter < 0)
@@ -66,23 +70,39 @@ public class CharacterChoosenManager : MonoBehaviour {
 					if (selectedCharacter < 0)
 						selectedCharacter = charactersLogo.Length - 1;
 				}
+				soundManager.effectSoundPlay (1);
 			}
 		}
 
 		if (Input.GetKeyDown (KeyCode.Z)) {
 			
 			if (statSelectedCharacter2 != -1) {
-				JumpToOtherScene.quickGoToScene ("mainscene");
+				JumpToOtherScene.quickGoToScene ("arenachoosen");
 			} else {
-				if (charactersLogo [selectedCharacter].GetComponent<CharacterLockSystem> ().lockState == CharacterLockSystem.LockState.unlocked) {
-					if (statSelectedCharacter1 == -1) {
-						statSelectedCharacter1 = selectedCharacter;
-						selectedCharacter = -1;
-					} else {
-						if (statSelectedCharacter1 != selectedCharacter) { //tidak memilih karakter yg sama
-							statSelectedCharacter2 = selectedCharacter;
+				if (selectedCharacter != -1) {
+					if (charactersLogo [selectedCharacter].GetComponent<CharacterLockSystem> ().lockState == CharacterLockSystem.LockState.unlocked) {
+						if (statSelectedCharacter1 == -1) {
+							statSelectedCharacter1 = selectedCharacter;
 							selectedCharacter = -1;
+
+							if (charactersLogo [statSelectedCharacter1].GetComponent<CharacterLockSystem> ().characterName == "erza")
+								soundManager.effectSoundPlay (3);
+							else if (charactersLogo [statSelectedCharacter1].GetComponent<CharacterLockSystem> ().characterName == "lyon")
+								soundManager.effectSoundPlay (4);
+						} else {
+							if (statSelectedCharacter1 != selectedCharacter) { //tidak memilih karakter yg sama
+								statSelectedCharacter2 = selectedCharacter;
+								selectedCharacter = -1;
+							}
+							soundManager.effectSoundPlay (5);
+
+							if (charactersLogo [statSelectedCharacter2].GetComponent<CharacterLockSystem> ().characterName == "erza")
+								StartCoroutine (playingDelaySFX (3));
+							else if (charactersLogo [statSelectedCharacter2].GetComponent<CharacterLockSystem> ().characterName == "lyon")
+								StartCoroutine (playingDelaySFX (4));
 						}
+					} else {
+						soundManager.effectSoundPlay (2);
 					}
 				}
 			}
@@ -98,6 +118,11 @@ public class CharacterChoosenManager : MonoBehaviour {
 				JumpToOtherScene.quickGoToScene ("modechoosen");
 			}
 		}
+	}
+
+	IEnumerator playingDelaySFX(int idSFX){
+		yield return new WaitForSeconds (1);
+		soundManager.effectSoundPlay (idSFX);
 	}
 
 	void updateSelectingMode(){

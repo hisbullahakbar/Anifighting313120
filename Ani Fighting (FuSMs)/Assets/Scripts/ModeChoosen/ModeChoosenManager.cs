@@ -9,6 +9,9 @@ public class ModeChoosenManager : MonoBehaviour {
 	[SerializeField]
 	GameObject[] modesText;
 
+	[SerializeField]
+	SoundManager soundManager;
+
 	int selectedMode,previousMode;
 	public static int statSelectedMode {
 		set;
@@ -32,12 +35,14 @@ public class ModeChoosenManager : MonoBehaviour {
 			previousMode = selectedMode;
 			selectedMode = (selectedMode + 1) % modesLogo.Length;
 			statSelectedMode = selectedMode;
+			soundManager.effectSoundPlay (1);
 		} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
 			previousMode = selectedMode;
 			selectedMode -= 1;
 			if (selectedMode < 0)
 				selectedMode = modesLogo.Length - 1;
 			statSelectedMode = selectedMode;
+			soundManager.effectSoundPlay (1);
 		}
 
 		if (Input.GetKeyDown (KeyCode.Z)) {

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/characterchoosen.unity
+- path: Assets/Scenes/arenachoosen.unity
   isLoaded: 1
   isActive: 1

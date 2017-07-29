@@ -53,6 +53,7 @@
      <Compile Include="Assets\Animations Behaviour\Character\IdleBehaviour.cs" />
      <Compile Include="Assets\Animations Behaviour\Character\JumpBehaviour.cs" />
      <Compile Include="Assets\Animations Behaviour\Character\LandBehaviour.cs" />
+     <Compile Include="Assets\Scripts\ArenaChoosen\ArenaChoosenManager.cs" />
      <Compile Include="Assets\Scripts\CharacterChoosen\CharacterChoosenManager.cs" />
      <Compile Include="Assets\Scripts\CharacterChoosen\CharacterLockSystem.cs" />
      <Compile Include="Assets\Scripts\EnemyState\CrouchState.cs" />
@@ -85,6 +86,7 @@
      <Compile Include="Assets\Scripts\ModeChoosen\ModeChoosenManager.cs" />
      <Compile Include="Assets\Scripts\Others\ImagesAutoFillingEffect.cs" />
      <Compile Include="Assets\Scripts\Others\JumpToOtherScene.cs" />
+     <Compile Include="Assets\Scripts\Others\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Others\SpriteAutoScale.cs" />
      <Compile Include="Assets\Scripts\Others\SpriteLoopScale.cs" />
      <Compile Include="Assets\Scripts\Others\SpritesAutoSlider.cs" />

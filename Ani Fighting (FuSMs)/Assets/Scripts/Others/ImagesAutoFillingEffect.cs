@@ -18,6 +18,12 @@ public class ImagesAutoFillingEffect : MonoBehaviour {
 	[SerializeField]
 	Image[] images;
 
+	[SerializeField]
+	bool isHasTransitionSound;
+
+	[SerializeField]
+	SoundManager soundManager;
+
 	int activeIndex;
 	bool isAlreadyFilled;
 	bool isAlreadySwitch;
@@ -36,6 +42,10 @@ public class ImagesAutoFillingEffect : MonoBehaviour {
 		images [activeIndex].fillAmount = 1;
 		isAlreadyFilled = true;
 		isAlreadySwitch = false;
+
+		if (isHasTransitionSound)
+			soundManager.effectSoundPlay (activeIndex);
+		
 		activeIndex = (activeIndex + 1) % images.Length;
 	}
 	
@@ -54,7 +64,7 @@ public class ImagesAutoFillingEffect : MonoBehaviour {
 			if (activeIndex > 0) {
 				if (images [activeIndex - 1].fillAmount > 0) {
 					images [activeIndex - 1].fillAmount -= fillOutPerTime;
-				}	
+				}
 			} else {
 				if (images [images.Length - 1].fillAmount > 0) {
 					images [images.Length - 1].fillAmount -= fillOutPerTime;
@@ -66,6 +76,10 @@ public class ImagesAutoFillingEffect : MonoBehaviour {
 			} else {
 				isAlreadyFilled = false;
 				isAlreadySwitch = false;
+
+				if (isHasTransitionSound) {
+					soundManager.effectSoundPlay (activeIndex);
+				}
 			}
 		}
 	}

@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterChoosen\CharacterChoosenManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ArenaChoosen\ArenaChoosenManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\Others\effectSoundScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ModeChoosen\ModeChoosenManager.cs" Line="56" Column="56" />
-      <File FileName="Assets\Scripts\CharacterChoosen\CharacterChoosenManager.cs" Line="81" Column="8" />
-      <File FileName="Assets\Scripts\CharacterChoosen\CharacterLockSystem.cs" Line="14" Column="30" />
+      <File FileName="Assets\Scripts\CharacterChoosen\CharacterChoosenManager.cs" Line="14" Column="2" />
+      <File FileName="Assets\Scripts\ArenaChoosen\ArenaChoosenManager.cs" Line="55" Column="4" />
+      <File FileName="Assets\Scripts\Others\SoundManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Others\JumpToOtherScene.cs" Line="16" Column="2" />
+      <File FileName="Assets\Scripts\CharacterChoosen\CharacterLockSystem.cs" Line="12" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
