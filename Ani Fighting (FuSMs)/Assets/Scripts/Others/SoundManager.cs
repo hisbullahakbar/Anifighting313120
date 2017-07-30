@@ -5,6 +5,8 @@ public class SoundManager : MonoBehaviour {
 	//class untuk mengatur music atau sfx yang akan diputar
 	public AudioSource[] effectSound;
 	public bool[] isOneEffectPerTime;
+
+	public bool isDontHaveMusic;
 	public AudioSource music;
 
 	public void effectSoundPlay(int i)
@@ -27,14 +29,18 @@ public class SoundManager : MonoBehaviour {
 	
 	public void Start()
 	{
-		music.Play();
+		if (!isDontHaveMusic) {
+			music.Play ();
+		}
 	}
 	
 	public void Update()
 	{
-		if (PlayerPrefs.GetInt("isMute") == 0)
-			music.mute = false;
-		else
-			music.mute = true;
+		if (!isDontHaveMusic) {
+			if (PlayerPrefs.GetInt ("isMute") == 0)
+				music.mute = false;
+			else
+				music.mute = true;
+		}
 	}
 }
