@@ -33,6 +33,12 @@ public class SoundManager : MonoBehaviour {
 			music.Play ();
 		}
 	}
+
+	public void StartDelayedMusic(AudioClip delayedMusic){
+		isDontHaveMusic = false;
+		music.clip = delayedMusic;
+		music.Play ();
+	}
 	
 	public void Update()
 	{

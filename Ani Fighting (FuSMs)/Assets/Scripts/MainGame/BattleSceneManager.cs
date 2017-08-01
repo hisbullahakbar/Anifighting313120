@@ -42,6 +42,21 @@ public class BattleSceneManager : MonoBehaviour {
         }
     }
 
+	#region battle setting
+	[SerializeField]
+	GameObject mainBackground;
+
+	[SerializeField]
+	Sprite[] arenas;
+
+	[SerializeField]
+	SoundManager soundManager;
+
+	[SerializeField]
+	AudioClip[] musicArenas;
+
+	#endregion
+
     #region openingBattle
     bool isAlreadyBeginingPose, isFightIconDestroyed;
     [SerializeField]
@@ -58,7 +73,9 @@ public class BattleSceneManager : MonoBehaviour {
     {
         state = BattleSceneState.characterInfo;
         isAlreadyBeginingPose = false;
-        isFightIconDestroyed = false;
+		isFightIconDestroyed = false;
+		soundManager.StartDelayedMusic (musicArenas [ArenaChoosenManager.statSelectedArena]);
+		loadArenaSprite (ArenaChoosenManager.statSelectedArena);
     }
 	
 	void Update () {
@@ -114,5 +131,9 @@ public class BattleSceneManager : MonoBehaviour {
 	IEnumerator WinLoseMenuDelayActivating(){
 		yield return new WaitForSeconds (2f);
 		state = BattleSceneManager.BattleSceneState.winLoseInfo;
+	}
+
+	void loadArenaSprite(int id){
+		mainBackground.GetComponent<SpriteRenderer> ().sprite = arenas [id];
 	}
 }
