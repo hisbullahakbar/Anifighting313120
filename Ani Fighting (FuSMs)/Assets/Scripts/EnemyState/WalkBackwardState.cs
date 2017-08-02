@@ -6,7 +6,7 @@ public class WalkBackwardState : IEnemyState
 {
     private Enemy enemy;
     private float walkBackwardTimer;
-    private float walkBackwardDuration = 2f;
+    private float walkBackwardDuration = 0.5f;
 
     public string getStateName()
     {

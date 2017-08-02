@@ -6,7 +6,7 @@ public class WalkState : IEnemyState
 {
     private Enemy enemy;
     private float walkTimer;
-    private float walkDuration = 2f;
+    private float walkDuration = 0.5f;
 
     public string getStateName()
     {

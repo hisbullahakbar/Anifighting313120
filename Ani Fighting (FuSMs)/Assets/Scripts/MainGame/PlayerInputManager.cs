@@ -20,7 +20,7 @@ public class PlayerInputManager : MonoBehaviour {
 
         public void resetTotal()
         {
-            totalMovementLaunched = 0;
+            totalMovementLaunched = 1;
         }
 
         public int getTotalMovement()

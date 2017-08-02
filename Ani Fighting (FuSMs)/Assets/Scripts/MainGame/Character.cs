@@ -54,6 +54,8 @@ public abstract class Character : MonoBehaviour
     [SerializeField]
     protected CharacterMugshoot mugshoot;
 
+	public int IDCharacter{ get; protected set; }
+
     public virtual void Start()
     {
         CharaAnimator = GetComponent<Animator>();

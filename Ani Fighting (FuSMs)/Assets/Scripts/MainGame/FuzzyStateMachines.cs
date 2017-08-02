@@ -199,7 +199,7 @@ public class FuzzyStateMachines : MonoBehaviour {
             }
         }
 
-        //Cek kembali bagian dibawah ini
+        //Cek kembali bagian dibawah ini------- SEMENTARA FIX, TAPI CEK KEMBALI.............
         float randomValue = (float)Random.Range(1, 100);
         float tempTotal = 0;
         for (int i = 0; i < finalRuleValues.Length; i++)
@@ -208,12 +208,14 @@ public class FuzzyStateMachines : MonoBehaviour {
             {
                 tempTotal += (finalRuleValues[i] * 100);
             }
-            else
+
+			if(tempTotal >= randomValue)
             {
-                choosenRuleIndex = i - 1;
+                choosenRuleIndex = i;
                 break;
             }
         }
+		//----------------------------------------------------------------
 
         fusmsLogHistory.addTransition(Player.Instance.Target.GetComponent<Enemy>().CurrentState.getStateName(),
             totalRange, totalLightAttack, totalHeavyAttack, totalRangedAttack, totalUpAttack, totalMiddleAttack, totalDownAttack,

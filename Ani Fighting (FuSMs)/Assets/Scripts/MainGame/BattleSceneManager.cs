@@ -68,6 +68,12 @@ public class BattleSceneManager : MonoBehaviour {
 
 	[SerializeField]
 	GameObject winLoseMenu;
+	[SerializeField]
+	GameObject winCharacter;
+	[SerializeField]
+	Sprite[] winCharacterSprite;
+	[SerializeField]
+	Text winIdCharacter;
 
     void Start()
     {
@@ -112,9 +118,13 @@ public class BattleSceneManager : MonoBehaviour {
 			textWinLoseState.GetComponent<Text> ().enabled = true;
 			if (WinLoseManager.Instance.isPlayer1Win ()) {
 				textWinLoseState.text = "Player 1 Win";
+				loadWinCharacterImage (Player.Instance.IDCharacter);
+				winIdCharacter.text = "1";
 				Player.Instance.CharaAnimator.SetBool ("winPose", true);
 			} else if (WinLoseManager.Instance.isPlayer2Win ()) {
 				textWinLoseState.text = "Player 2 Win";
+				loadWinCharacterImage (Player.Instance.Target.GetComponent<Enemy> ().IDCharacter);
+				winIdCharacter.text = "2";
 				Player.Instance.Target.GetComponent<Enemy> ().CharaAnimator.SetBool ("winPose", true);
 			}
 
@@ -124,6 +134,10 @@ public class BattleSceneManager : MonoBehaviour {
 		case BattleSceneState.winLoseInfo: //5
 			textWinLoseState.enabled = false;
 			winLoseMenu.SetActive (true);
+			if (Input.GetKeyDown (KeyCode.Return)) {
+				StopAllCoroutines ();
+				JumpToOtherScene.quickGoToScene ("modechoosen");
+			}
 			break;
 		}
 	}
@@ -135,5 +149,9 @@ public class BattleSceneManager : MonoBehaviour {
 
 	void loadArenaSprite(int id){
 		mainBackground.GetComponent<SpriteRenderer> ().sprite = arenas [id];
+	}
+
+	void loadWinCharacterImage(int idCharacter){
+		winCharacter.GetComponent<Image> ().sprite = winCharacterSprite [idCharacter];
 	}
 }

@@ -68,7 +68,8 @@ public class Enemy : Character
     public override void Start()
     {
         base.Start();
-        target = Player.Instance.gameObject;
+		target = Player.Instance.gameObject;
+		IDCharacter = CharacterChoosenManager.statSelectedCharacter2;
 
         ChangeState(new IdleState());
     }

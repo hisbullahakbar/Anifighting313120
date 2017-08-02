@@ -30,6 +30,7 @@ public class Player : Character {
 	public override void Start () {
 		base.Start();
 		charaRigidbody2D = GetComponent<Rigidbody2D> (); 
+		IDCharacter = CharacterChoosenManager.statSelectedCharacter1;
 	}
 
     void Update()
