@@ -59,7 +59,7 @@ public class ModeChoosenManager : MonoBehaviour {
 	void updateSelectingMode(){
 		modesLogo [selectedMode].GetComponent<SpriteRenderer> ().color = new Color (120f/255f, 88f/255f, 88f/255f, 1f);
 		modesText [selectedMode].transform.position = Vector3.MoveTowards (modesText [selectedMode].transform.position,
-			new Vector3 (modesLogo [selectedMode].transform.position.x, -0.455f, -1f), 0.3f);
+			new Vector3 (modesLogo [selectedMode].transform.position.x, -0.16f, -1f), 0.3f);
 		
 		if (previousMode >= 0) {
 			modesLogo [previousMode].GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);

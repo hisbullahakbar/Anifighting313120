@@ -39,7 +39,7 @@ public class CharacterChoosenManager : MonoBehaviour {
 		} else {
 			playerIcon [0].GetComponent<SpriteRenderer> ().enabled = true;
 			playerIcon [0].transform.position = new Vector3 (
-				charactersLogo [statSelectedCharacter1].transform.position.x, -3.5f, charactersLogo [statSelectedCharacter1].transform.position.z);
+				charactersLogo [statSelectedCharacter1].transform.position.x, -2.9f, charactersLogo [statSelectedCharacter1].transform.position.z);
 		}
 
 		if (statSelectedCharacter2 == -1) {
@@ -47,7 +47,7 @@ public class CharacterChoosenManager : MonoBehaviour {
 		} else {
 			playerIcon [1].GetComponent<SpriteRenderer> ().enabled = true;
 			playerIcon [1].transform.position = new Vector3 (
-				charactersLogo [statSelectedCharacter2].transform.position.x, -3.5f, charactersLogo [statSelectedCharacter2].transform.position.z);
+				charactersLogo [statSelectedCharacter2].transform.position.x, -2.9f, charactersLogo [statSelectedCharacter2].transform.position.z);
 		}
 	}
 
@@ -144,6 +144,6 @@ public class CharacterChoosenManager : MonoBehaviour {
 	void unselectingAnimation(GameObject someLogo, GameObject someText){
 		someLogo.GetComponent<SpriteRenderer> ().color = new Color (1f, 1f, 1f, 1f);
 		someText.transform.position = Vector3.MoveTowards (someText.transform.position,
-			new Vector3 (someLogo.transform.position.x, -3.5f, someText.transform.position.z), 0.3f);
+			new Vector3 (someLogo.transform.position.x, -2.9f, someText.transform.position.z), 0.3f);
 	}	
 }

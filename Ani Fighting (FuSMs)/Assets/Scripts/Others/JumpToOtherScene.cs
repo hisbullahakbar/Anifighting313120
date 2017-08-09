@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class JumpToOtherScene : MonoBehaviour {
 
@@ -39,27 +40,44 @@ public class JumpToOtherScene : MonoBehaviour {
 	}
 
 	IEnumerator goToSceneDelay(string scene){
-		yield return new WaitForSeconds (2f);
-		Application.LoadLevel(scene);
+		yield return new WaitForSeconds (6f);
+
+		#if UNITY_5_5_OR_NEWER
+			SceneManager.LoadScene(scene);
+		#else
+			Application.LoadLevel(scene);
+		#endif
 	}
 
     public static void quickGoToScene(string scene)
     {
-        Application.LoadLevel(scene);
-    }
+		#if UNITY_5_5_OR_NEWER
+			SceneManager.LoadScene(scene);
+		#else
+        	Application.LoadLevel(scene);
+		#endif
+	}
 
     public void goToScene(string scene)
-    {
-        Application.LoadLevel(scene);
-    }
+	{
+		#if UNITY_5_5_OR_NEWER
+			SceneManager.LoadScene(scene);
+		#else
+        	Application.LoadLevel(scene);
+		#endif
+	}
 
     public void goToScene()
-    {
-        Application.LoadLevel(Application.loadedLevelName);
-    }
+	{
+		#if UNITY_5_5_OR_NEWER
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		#else
+        	Application.LoadLevel(Application.loadedLevelName);
+		#endif
+	}
 
     public void goCloseApplication()
-    {
-        Application.Quit();
-    }
+	{
+		Application.Quit ();
+	}
 }
