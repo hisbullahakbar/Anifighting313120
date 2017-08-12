@@ -31,22 +31,42 @@ public class Player : Character {
 		base.Start();
 		charaRigidbody2D = GetComponent<Rigidbody2D> (); 
 		IDCharacter = CharacterChoosenManager.statSelectedCharacter1;
+
+		if (LayerMask.LayerToName(gameObject.layer) == "Erza")
+			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Lyon"), gameObject.layer);
+		else if (LayerMask.LayerToName(gameObject.layer) == "Lyon")
+			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Erza"), gameObject.layer);
 	}
 
     void Update()
-    {
-        if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.battle)
-        {
-            if (!takingDamage && !IsDead)
-            {
-                HandleInput();
-            }
-        }
-        //else if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.beginingPose)
-        //{
+	{
+		if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.battle) {
+			if (!takingDamage && !IsDead) {
+				HandleInput ();
+			}
+		}
 
-        //}
-    }
+		//TANDAI INI coba diedit dimasukan kedalam script player dan enemy
+
+		//script ini berhasil ganti ukuran tapi offsetnya tidak bagus
+		Vector2 S = gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.size;
+		Vector2 P = gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.center;
+
+		//Debug.Log (gameObject.GetComponent<SpriteRenderer> ().sprite.name);
+		//Debug.Log ("size = " + S.x + "," + S.y);
+		//Debug.Log ((0.5f * S.x * 100));
+		//Debug.Log (P.x);
+		//Debug.Log (((0.5f * S.x * 100) - P.x));
+		//Debug.Log (((0.5f * S.x * 100) - P.x) / 100);
+		//Debug.Log ("pivot = " + (((0.5f * S.x * 100) - P.x) / 100) + "," + (((0.5f * S.y * 100) - P.y) / 100));
+		gameObject.GetComponent<BoxCollider2D> ().size = S;
+		gameObject.GetComponent<BoxCollider2D> ().offset = P;
+			//	new Vector2 (((0.5f * S.x * 100) - P.x) / 100, ((0.5f * S.y * 100) - P.y) / 100);
+
+		//script ini berhasill tapi berat
+		//Destroy(gameObject.GetComponent<BoxCollider2D>());
+		//gameObject.AddComponent<BoxCollider2D>();
+	}
 
     public override void FixedUpdate()
     {

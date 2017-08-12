@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 68671c749d29e474bae2bbbf76c8b05c
-timeCreated: 1494394946
+timeCreated: 1502544313
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -151,11 +151,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 20
         width: 127
-        height: 283
+        height: 263
       alignment: 9
-      pivot: {x: 0.7119927, y: 0.62005085}
+      pivot: {x: 0.7014616, y: 0.59462404}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -164,11 +164,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 139
-        y: 0
+        y: 21
         width: 128
-        height: 280
+        height: 259
       alignment: 9
-      pivot: {x: 0.7103363, y: 0.6213473}
+      pivot: {x: 0.71033525, y: 0.604}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -177,11 +177,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 277
-        y: 0
+        y: 21
         width: 128
-        height: 277
+        height: 256
       alignment: 9
-      pivot: {x: 0.7053211, y: 0.6273036}
+      pivot: {x: 0.70651937, y: 0.62}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -190,11 +190,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 417
-        y: 0
+        y: 20
         width: 128
-        height: 280
+        height: 260
       alignment: 9
-      pivot: {x: 0.71534514, y: 0.6282256}
+      pivot: {x: 0.7153454, y: 0.6027394}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -203,11 +203,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 549
-        y: 0
+        y: 20
         width: 128
-        height: 283
+        height: 263
       alignment: 9
-      pivot: {x: 0.7153444, y: 0.6200508}
+      pivot: {x: 0.7084141, y: 0.594624}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

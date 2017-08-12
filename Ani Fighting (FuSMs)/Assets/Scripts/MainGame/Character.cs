@@ -73,7 +73,6 @@ public abstract class Character : MonoBehaviour
 
     void Update()
     {
-
     }
 
     public int getHealth()

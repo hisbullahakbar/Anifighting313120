@@ -72,6 +72,11 @@ public class Enemy : Character
 		IDCharacter = CharacterChoosenManager.statSelectedCharacter2;
 
         ChangeState(new IdleState());
+
+		if (LayerMask.LayerToName(gameObject.layer) == "Erza")
+			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Lyon"), gameObject.layer);
+		else if (LayerMask.LayerToName(gameObject.layer) == "Lyon")
+			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Erza"), gameObject.layer);
     }
 
     //use this method in class player for change flip function jobs..
@@ -109,6 +114,12 @@ public class Enemy : Character
         //{
 
         //}
+
+		Vector2 S = gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.size;
+		Vector2 P = gameObject.GetComponent<SpriteRenderer> ().sprite.bounds.center;
+
+		gameObject.GetComponent<BoxCollider2D> ().size = S;
+		gameObject.GetComponent<BoxCollider2D> ().offset = P;
     }
 
     public void ChangeState(IEnemyState newState)

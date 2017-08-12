@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 76744dc0303edd842bf4ba67577fe39f
-timeCreated: 1494330598
+timeCreated: 1502548291
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -237,9 +237,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 12
+        y: 11
         width: 234
-        height: 211
+        height: 216
       alignment: 9
       pivot: {x: 0.5661528, y: 0.51992404}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,9 +250,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 263
-        y: 12
+        y: 11
         width: 236
-        height: 211
+        height: 216
       alignment: 9
       pivot: {x: 0.5481407, y: 0.5039245}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -267,7 +267,7 @@ TextureImporter:
         width: 417
         height: 383
       alignment: 9
-      pivot: {x: 0.36571884, y: 0.28435227}
+      pivot: {x: 0.36571884, y: 0.3443523}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -276,11 +276,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 985
-        y: 12
+        y: 8
         width: 400
         height: 380
       alignment: 9
-      pivot: {x: 0.37751037, y: 0.29001787}
+      pivot: {x: 0.37751037, y: 0.3443523}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -291,9 +291,9 @@ TextureImporter:
         x: 1414
         y: 12
         width: 233
-        height: 368
+        height: 370
       alignment: 9
-      pivot: {x: 0.6742336, y: 0.30219054}
+      pivot: {x: 0.6742336, y: 0.3621905}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -304,9 +304,9 @@ TextureImporter:
         x: 1670
         y: 9
         width: 302
-        height: 296
+        height: 373
       alignment: 9
-      pivot: {x: 0.57880163, y: 0.5}
+      pivot: {x: 0.60909003, y: 0.38278866}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -314,7 +314,7 @@ TextureImporter:
       name: Erza Heavy Attack_16
       rect:
         serializedVersion: 2
-        x: 1995
+        x: 1991
         y: 0
         width: 158
         height: 233
