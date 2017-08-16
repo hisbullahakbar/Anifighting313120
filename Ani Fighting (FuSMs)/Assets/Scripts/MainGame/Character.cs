@@ -56,6 +56,12 @@ public abstract class Character : MonoBehaviour
 
 	public int IDCharacter{ get; protected set; }
 
+	protected bool immortal = false;
+
+	[SerializeField]
+	protected float immortalTime;
+	protected SpriteRenderer spriteRenderer;
+
     public virtual void Start()
     {
         CharaAnimator = GetComponent<Animator>();
@@ -69,6 +75,7 @@ public abstract class Character : MonoBehaviour
         damageCounter = 0;
         healthBar.GetComponent<HealthBar>().SetMaximum(gameObject);
         healthBar.GetComponent<HealthBar>().UpdateHealthBar(health);
+		spriteRenderer = GetComponent<SpriteRenderer> ();
     }
 
     void Update()
@@ -178,11 +185,22 @@ public abstract class Character : MonoBehaviour
 
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (damageSources.Contains(other.tag))
-        {
-            //MASIH ADA BUG DIBAGIAN GETDAMAGE!!!
-            //1. get damage tidak keluar saat player memilih state aktif lain
-            StartCoroutine(TakeDamage());
-        }
+		if (damageSources.Contains (other.tag)) {
+			//MASIH ADA BUG DIBAGIAN GETDAMAGE!!!
+			//1. get damage tidak keluar saat player memilih state aktif lain
+
+			//if (!immortal) {
+				StartCoroutine (TakeDamage ());
+			//}
+		}
     }
+
+	protected IEnumerator IndicateImmortal(){
+		while (immortal) {
+			spriteRenderer.color = Color.yellow;
+			yield return new WaitForSeconds (0.05f);
+			spriteRenderer.color = Color.white;
+			yield return new WaitForSeconds (0.05f);
+		}
+	}
 }

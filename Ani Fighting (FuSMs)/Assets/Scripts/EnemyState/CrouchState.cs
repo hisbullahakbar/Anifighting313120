@@ -8,7 +8,7 @@ public class CrouchState : IEnemyState
     private Enemy enemy;
 
     private float crouchTimer;
-    private float crouchDuration = 1;
+    private float crouchDuration = 0.5f;
     private bool canCrouch = true;
 
     public string getStateName()
@@ -50,73 +50,85 @@ public class CrouchState : IEnemyState
         FuzzyStateMachines.Instance.initiateFuSMs();
         FuzzyStateMachines.Instance.runFuSMs();
 
+		/*
         switch (((MovementType.enemy)FuzzyStateMachines.Instance.ChoosenRuleIndex).ToString())
         {
-            //masih bug sedikit disini
-            case "idle":
-                enemy.ChangeState(new IdleState());
+			case "idle":
+				enemy.ChangeState (new IdleState ());
+				enemy.CharaAnimator.SetBool ("crouch", false);
                 break;
             case "walk":
                 enemy.ChangeState(new WalkState());
+				enemy.CharaAnimator.SetBool ("crouch", false);
                 break;
             case "walkBackward":
                 enemy.ChangeState(new WalkBackwardState());
-                break;
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
             case "lightAttack":
                 enemy.ChangeState(new LightAttackState());
+				enemy.CharaAnimator.SetBool ("crouch", false);
                 break;
             case "heavyAttack":
                 enemy.ChangeState(new HeavyAttackState());
-                break;
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
             case "rangedAttack":
                 enemy.ChangeState(new RangedAttackState());
-                break;
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
             case "jump":
                 enemy.ChangeState(new JumpState());
-                break;
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
             case "crouch":
                 enemy.ChangeState(new CrouchState());
                 break;
-        }
+        }*/
 
         if (crouchTimer >= crouchDuration)
         {
             canCrouch = true;
             crouchTimer = 0;
-            enemy.CharaAnimator.SetBool("crouch", false);
+            //enemy.CharaAnimator.SetBool("crouch", false);
             //enemy.ChangeState(new IdleState());
 
             FuzzyStateMachines.Instance.initiateFuSMs();
             FuzzyStateMachines.Instance.runFuSMs();
 
-            switch (((MovementType.enemy)FuzzyStateMachines.Instance.ChoosenRuleIndex).ToString())
-            {
-                //masih bug sedikit disini
-                case "idle":
-                    enemy.ChangeState(new IdleState());
-                    break;
-                case "walk":
-                    enemy.ChangeState(new WalkState());
-                    break;
-                case "walkBackward":
-                    enemy.ChangeState(new WalkBackwardState());
-                    break;
-                case "lightAttack":
-                    enemy.ChangeState(new LightAttackState());
-                    break;
-                case "heavyAttack":
-                    enemy.ChangeState(new HeavyAttackState());
-                    break;
-                case "rangedAttack":
-                    enemy.ChangeState(new RangedAttackState());
-                    break;
-                case "jump":
-                    enemy.ChangeState(new JumpState());
-                    break;
-                case "crouch":
-                    enemy.ChangeState(new CrouchState());
-                    break;
-            }
+			switch (((MovementType.enemy)FuzzyStateMachines.Instance.ChoosenRuleIndex).ToString())
+			{
+			case "idle":
+				enemy.ChangeState (new IdleState ());
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
+			case "walk":
+				enemy.ChangeState(new WalkState());
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
+			case "walkBackward":
+				enemy.ChangeState(new WalkBackwardState());
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
+			case "lightAttack":
+				enemy.ChangeState(new LightAttackState());
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
+			case "heavyAttack":
+				enemy.ChangeState(new HeavyAttackState());
+				break;
+			case "rangedAttack":
+				enemy.ChangeState(new RangedAttackState());
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
+			case "jump":
+				enemy.ChangeState(new JumpState());
+				enemy.CharaAnimator.SetBool ("crouch", false);
+				break;
+			case "crouch":
+				enemy.ChangeState(new CrouchState());
+				break;
+			}
         }
     }
 }

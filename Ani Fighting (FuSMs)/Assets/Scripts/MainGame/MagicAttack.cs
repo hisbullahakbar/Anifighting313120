@@ -37,4 +37,10 @@ public class MagicAttack : MonoBehaviour {
 	void OnBecameInvisible(){
 		Destroy (gameObject);
 	}
+
+	void OnTriggerEnter2D(Collider2D col){
+		if ((LayerMask.LayerToName (gameObject.layer) == "IceEagle" && LayerMask.LayerToName (col.gameObject.layer) == "ThunderLance") ||
+		    (LayerMask.LayerToName (gameObject.layer) == "ThunderLance" && LayerMask.LayerToName (col.gameObject.layer) == "IceEagle"))
+			Destroy (gameObject);
+	}
 }

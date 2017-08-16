@@ -73,22 +73,25 @@ public class Player : Character {
         if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.battle)
         {
             if (!takingDamage && !IsDead)
-            {
-                float horizontal = Input.GetAxis("Horizontal");
+			{
+				float horizontal = 0;
+				if (!crouch)
+					horizontal = Input.GetAxis ("Horizontal");
 
                 base.horizontal = horizontal;
                 base.FixedUpdate();
 
                 LookAtTarget();
                 //Flip(horizontal);
-            }
+			}
         }
     }
 
 	private void HandleInput(){
 		if (Input.GetKeyDown (KeyCode.X)) {
-			CharaAnimator.SetTrigger ("jump");
-
+			if (!CharaAnimator.GetBool ("crouch"))
+				CharaAnimator.SetTrigger ("jump");
+			
             //FuzzyStateMachines.Instance.initiateFuSMs();
             //FuzzyStateMachines.Instance.runFuSMs();
         }
@@ -206,31 +209,36 @@ public class Player : Character {
     }
 
     public override IEnumerator TakeDamage()
-    {
-        health -= 10;
-        healthBar.GetComponent<HealthBar>().UpdateHealthBar(health);
+	{
+		if (!immortal) {
+			health -= 10;
+			healthBar.GetComponent<HealthBar> ().UpdateHealthBar (health);
+			if (CharaAnimator.GetBool ("crouch"))
+				CharaAnimator.SetBool ("crouch", false);
 
-        if (!IsDead)
-        {
-            CharaAnimator.SetTrigger("damage");
-            if (damageCounter < 2)
-            {
-                damageCounter += 1;
-            }
-            else
-            {
-                damageCounter = 0;
-            }
-            CharaAnimator.SetInteger("damageCounter", damageCounter);
-        }
-        else
-        {
-            CharaAnimator.SetLayerWeight(1, 0);
-            CharaAnimator.SetTrigger("die");
-            WinLoseManager.Instance.setWinLoseState(WinLoseManager.WinloseState.player2Win);
-            BattleSceneManager.Instance.State = BattleSceneManager.BattleSceneState.winLosePose;
-        }
+			if (!IsDead) {
+				CharaAnimator.SetTrigger ("damage");
+				if (damageCounter < 2) {
+					damageCounter += 1;
+					CharaAnimator.SetInteger ("damageCounter", damageCounter);
+				} else {
+					immortal = true;
 
-        yield return null;
-    }
+					StartCoroutine (IndicateImmortal ());
+					yield return new WaitForSeconds (immortalTime);
+					immortal = false;
+
+					damageCounter = 0;
+					CharaAnimator.SetInteger ("damageCounter", damageCounter);
+				}
+			} else {
+				CharaAnimator.SetLayerWeight (1, 0);
+				CharaAnimator.SetTrigger ("die");
+				WinLoseManager.Instance.setWinLoseState (WinLoseManager.WinloseState.player2Win);
+				BattleSceneManager.Instance.State = BattleSceneManager.BattleSceneState.winLosePose;
+			}
+
+			yield return null;
+		}
+	}
 }

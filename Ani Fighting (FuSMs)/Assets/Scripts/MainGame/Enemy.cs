@@ -167,31 +167,36 @@ public class Enemy : Character
     }
 
     public override IEnumerator TakeDamage()
-    {
-        health -= 10;
-        healthBar.GetComponent<HealthBar>().UpdateHealthBar(health);
+	{
+		if (!immortal) {
+			health -= 10;
+			healthBar.GetComponent<HealthBar> ().UpdateHealthBar (health);
+			if (CharaAnimator.GetBool ("crouch"))
+				CharaAnimator.SetBool ("crouch", false);
+		
+			if (!IsDead) {
+				CharaAnimator.SetTrigger ("damage");
+				if (damageCounter < 2) {
+					damageCounter += 1;
+					CharaAnimator.SetInteger ("damageCounter", damageCounter);
+				} else {
+					immortal = true;
 
-        if (!IsDead)
-        {
-            CharaAnimator.SetTrigger("damage");
-            if (damageCounter < 2)
-            {
-                damageCounter += 1;
-            }
-            else
-            {
-                damageCounter = 0;
-            }
-            CharaAnimator.SetInteger("damageCounter", damageCounter);
-        }
-        else
-        {
-            CharaAnimator.SetTrigger("die");
-            WinLoseManager.Instance.setWinLoseState(WinLoseManager.WinloseState.player1Win);
-            BattleSceneManager.Instance.State = BattleSceneManager.BattleSceneState.winLosePose;
-            yield return null;
-        }
-    }
+					StartCoroutine (IndicateImmortal ());
+					yield return new WaitForSeconds (immortalTime);
+					immortal = false;
+
+					damageCounter = 0;
+					CharaAnimator.SetInteger ("damageCounter", damageCounter);
+				}	
+			} else {
+				CharaAnimator.SetTrigger ("die");
+				WinLoseManager.Instance.setWinLoseState (WinLoseManager.WinloseState.player1Win);
+				BattleSceneManager.Instance.State = BattleSceneManager.BattleSceneState.winLosePose;
+				yield return null;
+			}
+		}
+	}
 
     public override bool IsDead
     {
