@@ -63,9 +63,21 @@ public class BattleSceneManager : MonoBehaviour {
     GameObject fightIcon;
     #endregion
 
+	[SerializeField]
+	GameObject gameModeIcon;
+	[SerializeField]
+	GameObject cbiPlayerIcon;
+	[SerializeField]
+	GameObject cbiEnemyIcon;
+	[SerializeField]
+	Sprite[] gameModeIconSprite;
+	[SerializeField]
+	Sprite[] cbiPlayerSprite;
+	[SerializeField]
+	Sprite[] cbiEnemySprite;
+
     [SerializeField]
     Text textWinLoseState;
-
 	[SerializeField]
 	GameObject winLoseMenu;
 	[SerializeField]
@@ -76,13 +88,15 @@ public class BattleSceneManager : MonoBehaviour {
 	Text winIdCharacter;
 
     void Start()
-    {
-        state = BattleSceneState.characterInfo;
-        isAlreadyBeginingPose = false;
+	{
+		state = BattleSceneState.characterInfo;
+		isAlreadyBeginingPose = false;
 		isFightIconDestroyed = false;
 		soundManager.StartDelayedMusic (musicArenas [ArenaChoosenManager.statSelectedArena]);
 		loadArenaSprite (ArenaChoosenManager.statSelectedArena);
-    }
+		loadCBISprite (CharacterChoosenManager.statSelectedCharacter1, CharacterChoosenManager.statSelectedCharacter2);
+		loadGameModeSprite (ModeChoosenManager.statSelectedMode);
+	}
 	
 	void Update () {
 		switch (state) {
@@ -91,11 +105,11 @@ public class BattleSceneManager : MonoBehaviour {
 		case BattleSceneState.beginingPose: //1
 			if (!isAlreadyBeginingPose) {
 				Player.Instance.CharaAnimator.SetBool ("beginingPose", true);
-				Player.Instance.Target.GetComponent<Enemy> ().CharaAnimator.SetBool ("beginingPose", true);
+				Enemy.Instance.CharaAnimator.SetBool ("beginingPose", true);
 				isAlreadyBeginingPose = true;
 			} else {
 				if (!Player.Instance.CharaAnimator.GetBool ("beginingPose")
-				    && !Player.Instance.Target.GetComponent<Enemy> ().CharaAnimator.GetBool ("beginingPose")) {
+					&& !Enemy.Instance.CharaAnimator.GetBool ("beginingPose")) {
 					state = BattleSceneState.battle;
 					fightIcon.GetComponent<SpriteRenderer> ().enabled = true;
 				}
@@ -118,14 +132,14 @@ public class BattleSceneManager : MonoBehaviour {
 			textWinLoseState.GetComponent<Text> ().enabled = true;
 			if (WinLoseManager.Instance.isPlayer1Win ()) {
 				textWinLoseState.text = "Player 1 Win";
-				loadWinCharacterImage (Player.Instance.IDCharacter);
+				loadWinCharacterImage (CharacterChoosenManager.statSelectedCharacter1);
 				winIdCharacter.text = "1";
 				Player.Instance.CharaAnimator.SetBool ("winPose", true);
 			} else if (WinLoseManager.Instance.isPlayer2Win ()) {
 				textWinLoseState.text = "Player 2 Win";
-				loadWinCharacterImage (Player.Instance.Target.GetComponent<Enemy> ().IDCharacter);
+				loadWinCharacterImage (CharacterChoosenManager.statSelectedCharacter2);
 				winIdCharacter.text = "2";
-				Player.Instance.Target.GetComponent<Enemy> ().CharaAnimator.SetBool ("winPose", true);
+				Enemy.Instance.CharaAnimator.SetBool ("winPose", true);
 			}
 
 			//WAKTU PEMANGGILAN MENGGUNAKAN DELAY
@@ -134,7 +148,7 @@ public class BattleSceneManager : MonoBehaviour {
 		case BattleSceneState.winLoseInfo: //5
 			textWinLoseState.enabled = false;
 			winLoseMenu.SetActive (true);
-			if (Input.GetKeyDown (KeyCode.Return)) {
+			if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown("joystick button 11")) {
 				StopAllCoroutines ();
 				JumpToOtherScene.quickGoToScene ("modechoosen");
 			}
@@ -145,6 +159,15 @@ public class BattleSceneManager : MonoBehaviour {
 	IEnumerator WinLoseMenuDelayActivating(){
 		yield return new WaitForSeconds (2f);
 		state = BattleSceneManager.BattleSceneState.winLoseInfo;
+	}
+
+	void loadGameModeSprite(int id){
+		gameModeIcon.GetComponent<SpriteRenderer> ().sprite = gameModeIconSprite [id];
+	}
+
+	void loadCBISprite(int playerID, int enemyID){
+		cbiPlayerIcon.GetComponent<SpriteRenderer> ().sprite = cbiPlayerSprite [playerID];
+		cbiEnemyIcon.GetComponent<SpriteRenderer> ().sprite = cbiEnemySprite [enemyID];
 	}
 
 	void loadArenaSprite(int id){

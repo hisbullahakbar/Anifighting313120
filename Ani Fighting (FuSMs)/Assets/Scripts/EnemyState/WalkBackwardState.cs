@@ -47,6 +47,7 @@ public class WalkBackwardState : IEnemyState
         if (walkBackwardTimer >= walkBackwardDuration ||(Player.Instance.onGround &&  enemy.InFarRange))
         {
             //enemy.ChangeState(new IdleState());
+
             FuzzyStateMachines.Instance.initiateFuSMs();
             FuzzyStateMachines.Instance.runFuSMs();
 

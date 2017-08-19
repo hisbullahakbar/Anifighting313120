@@ -4,6 +4,26 @@ using UnityEngine;
 
 public class Enemy : Character
 {
+	private static Enemy instance;
+	public static Enemy Instance {
+		get {
+			if (instance == null) {
+				instance = GameObject.FindObjectOfType<Enemy> ();
+			}
+			return instance;
+		}
+	}
+
+	private GameObject target;
+	public GameObject Target
+	{
+		get {
+			if (target == null) {
+				target = GameObject.FindObjectOfType<Player> ().gameObject;
+			}
+			return target;
+		}
+	}
 
     private IEnemyState currentState;
     public IEnemyState CurrentState
@@ -11,19 +31,6 @@ public class Enemy : Character
         get
         {
             return currentState;
-        }
-    }
-
-    private GameObject target;
-    public GameObject Target
-    {
-        get
-        {
-            if (target == null)
-            {
-                target = GameObject.FindObjectOfType<Player>().gameObject;
-            }
-            return target;
         }
     }
 
@@ -77,6 +84,8 @@ public class Enemy : Character
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Lyon"), gameObject.layer);
 		else if (LayerMask.LayerToName(gameObject.layer) == "Lyon")
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Erza"), gameObject.layer);
+
+		//Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("FootCollider"), gameObject.layer);
     }
 
     //use this method in class player for change flip function jobs..
@@ -166,10 +175,10 @@ public class Enemy : Character
         currentState.OnTriggerEnter(other);
     }
 
-    public override IEnumerator TakeDamage()
+    public override IEnumerator TakeDamage(float damagePoint)
 	{
 		if (!immortal) {
-			health -= 10;
+			health -=  (int)damagePoint;
 			healthBar.GetComponent<HealthBar> ().UpdateHealthBar (health);
 			if (CharaAnimator.GetBool ("crouch"))
 				CharaAnimator.SetBool ("crouch", false);

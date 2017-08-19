@@ -18,9 +18,12 @@ public class ArenaChoosenManager : MonoBehaviour {
 	[SerializeField]
 	SoundManager soundManager;
 
+	bool afterMove;
+
 	void Start () {
 		selectedArena = -1;	
 		statSelectedArena = -1;
+		afterMove = false;
 	}
 
 	void Update () {
@@ -31,7 +34,7 @@ public class ArenaChoosenManager : MonoBehaviour {
 	}
 
 	void checkInput(){
-		if (Input.GetKeyDown (KeyCode.RightArrow)) {
+		if (Input.GetKeyDown (KeyCode.RightArrow) || (Input.GetAxis ("Horizontal") >= 0.75f && !afterMove)) {
 			previousArena = selectedArena;
 			if (selectedArena < arenasLogo.Length / maxRow) {
 				selectedArena = (selectedArena + 1) % (arenasLogo.Length / maxRow);
@@ -42,7 +45,8 @@ public class ArenaChoosenManager : MonoBehaviour {
 			}
 			statSelectedArena = selectedArena;
 			arenaChoosenSFX (statSelectedArena);
-		} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+			afterMove = true;
+		} else if (Input.GetKeyDown (KeyCode.LeftArrow) || (Input.GetAxis ("Horizontal") <= -0.75f && !afterMove)) {
 			previousArena = selectedArena;
 			selectedArena -= 1;
 			if (selectedArena < 0)
@@ -52,27 +56,34 @@ public class ArenaChoosenManager : MonoBehaviour {
 			
 			statSelectedArena = selectedArena;
 			arenaChoosenSFX (statSelectedArena);
-		} else if (Input.GetKeyDown (KeyCode.UpArrow)) {
+			afterMove = true;
+		} else if (Input.GetKeyDown (KeyCode.UpArrow) || (Input.GetAxis ("Vertical") >= 0.75f && !afterMove)) {
 			previousArena = selectedArena;
 			selectedArena = (selectedArena + (arenasLogo.Length / maxRow)) % arenasLogo.Length;
 			statSelectedArena = selectedArena;
 			arenaChoosenSFX (statSelectedArena);
-		} else if (Input.GetKeyDown (KeyCode.DownArrow)) {
+			afterMove = true;
+		} else if (Input.GetKeyDown (KeyCode.DownArrow) || (Input.GetAxis ("Vertical") <= -1f) && !afterMove) {
 			previousArena = selectedArena;
 			selectedArena -= (arenasLogo.Length / maxRow);
 			if (selectedArena < 0)
 				selectedArena = previousArena + (arenasLogo.Length / maxRow);
 			statSelectedArena = selectedArena;
 			arenaChoosenSFX (statSelectedArena);
+			afterMove = true;
+		}
+			
+		if (Input.GetAxis ("Horizontal") == 0.0f && Input.GetAxis ("Vertical") == 0.0f) {
+			afterMove = false;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Z)) {
+		if (Input.GetKeyDown (KeyCode.Z) || Input.GetKeyDown("joystick button 0")) {
 			if (selectedArena != -1) {
 				JumpToOtherScene.quickGoToScene ("mainscene");
 			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown("joystick button 1")) {
 			JumpToOtherScene.quickGoToScene ("characterchoosen");
 		}
 	}

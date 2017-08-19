@@ -24,10 +24,13 @@ public class CharacterChoosenManager : MonoBehaviour {
 		get;
 	}
 
+	bool afterMove;
+
 	void Start () {
 		selectedCharacter = -1;	
 		statSelectedCharacter1 = -1;
 		statSelectedCharacter2 = -1;
+		afterMove = false;
 	}
 
 	void Update () {
@@ -53,14 +56,15 @@ public class CharacterChoosenManager : MonoBehaviour {
 
 	void checkInput(){
 		if (statSelectedCharacter2 == -1) {
-			if (Input.GetKeyDown (KeyCode.RightArrow)) {
+			if (Input.GetKeyDown (KeyCode.RightArrow) || (Input.GetAxis("Horizontal") >= 0.75f && !afterMove)) {
 				selectedCharacter = (selectedCharacter + 1) % charactersLogo.Length;
 
 				if (selectedCharacter == statSelectedCharacter1) {
 					selectedCharacter = (selectedCharacter + 1) % charactersLogo.Length;
 				}
 				soundManager.effectSoundPlay (1);
-			} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+				afterMove = true;
+			} else if (Input.GetKeyDown (KeyCode.LeftArrow) || (Input.GetAxis("Horizontal") <= -0.75f && !afterMove)) {
 				selectedCharacter -= 1;
 				if (selectedCharacter < 0)
 					selectedCharacter = charactersLogo.Length - 1;
@@ -71,11 +75,15 @@ public class CharacterChoosenManager : MonoBehaviour {
 						selectedCharacter = charactersLogo.Length - 1;
 				}
 				soundManager.effectSoundPlay (1);
+				afterMove = true;
 			}
 		}
-
-		if (Input.GetKeyDown (KeyCode.Z)) {
 			
+		if (Input.GetAxis ("Horizontal") == 0.0f) {
+			afterMove = false;
+		}
+
+		if (Input.GetKeyDown (KeyCode.Z) || Input.GetKeyDown("joystick button 0")) {
 			if (statSelectedCharacter2 != -1) {
 				JumpToOtherScene.quickGoToScene ("arenachoosen");
 			} else {
@@ -108,7 +116,7 @@ public class CharacterChoosenManager : MonoBehaviour {
 			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown("joystick button 1")) {
 			if (statSelectedCharacter2 != -1) {
 				statSelectedCharacter2 = -1;
 			}

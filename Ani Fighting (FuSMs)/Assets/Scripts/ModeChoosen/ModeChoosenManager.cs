@@ -18,9 +18,12 @@ public class ModeChoosenManager : MonoBehaviour {
 		get;
 	}
 
+	bool afterMove;
+
 	void Start () {
 		selectedMode = -1;	
 		statSelectedMode = -1;
+		afterMove = false;
 	}
 	
 	void Update () {
@@ -31,27 +34,33 @@ public class ModeChoosenManager : MonoBehaviour {
 	}
 
 	void checkInput(){
-		if (Input.GetKeyDown (KeyCode.RightArrow)) {
+		if (Input.GetKeyDown (KeyCode.RightArrow) || (Input.GetAxis ("Horizontal") >= 0.75f && !afterMove)) {
 			previousMode = selectedMode;
 			selectedMode = (selectedMode + 1) % modesLogo.Length;
 			statSelectedMode = selectedMode;
 			soundManager.effectSoundPlay (1);
-		} else if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+			afterMove = true;
+		} else if (Input.GetKeyDown (KeyCode.LeftArrow) || (Input.GetAxis ("Horizontal") <= -0.75f && !afterMove)) {
 			previousMode = selectedMode;
 			selectedMode -= 1;
 			if (selectedMode < 0)
 				selectedMode = modesLogo.Length - 1;
 			statSelectedMode = selectedMode;
 			soundManager.effectSoundPlay (1);
+			afterMove = true;
 		}
 
-		if (Input.GetKeyDown (KeyCode.Z)) {
+		if (Input.GetAxis ("Horizontal") == 0.0f) {
+			afterMove = false;
+		}
+
+		if (Input.GetKeyDown (KeyCode.Z) || Input.GetKeyDown("joystick button 0")) {
 			if (selectedMode != -1) {
 				JumpToOtherScene.quickGoToScene ("characterchoosen");
 			}
 		}
 
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown("joystick button 1")) {
 			JumpToOtherScene.quickGoToScene ("mainmenu");
 		}
 	}

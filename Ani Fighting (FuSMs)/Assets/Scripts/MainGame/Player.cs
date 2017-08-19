@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Character {
-
+public class Player : Character 
+{
 	private static Player instance;
 	public static Player Instance {
 		get {
@@ -13,19 +13,17 @@ public class Player : Character {
 			return instance;
 		}
 	}
-    
-    private GameObject target;
-    public GameObject Target
-    {
-        get
-        {
-            if (target == null)
-            {
-                target = GameObject.FindObjectOfType<Enemy>().gameObject;
-            }
-            return target;
-        }
-    }
+
+	private GameObject target;
+	public GameObject Target
+	{
+		get {
+			if (target == null) {
+				target = GameObject.FindObjectOfType<Enemy> ().gameObject;
+			}
+			return target;
+		}
+	}
 
 	public override void Start () {
 		base.Start();
@@ -36,6 +34,8 @@ public class Player : Character {
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Lyon"), gameObject.layer);
 		else if (LayerMask.LayerToName(gameObject.layer) == "Lyon")
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Erza"), gameObject.layer);
+
+		Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("FootCollider"), gameObject.layer);
 	}
 
     void Update()
@@ -72,7 +72,7 @@ public class Player : Character {
     {
         if (BattleSceneManager.Instance.State == BattleSceneManager.BattleSceneState.battle)
         {
-            if (!takingDamage && !IsDead)
+			if ((!takingDamage || jump) && !IsDead)
 			{
 				float horizontal = 0;
 				if (!crouch)
@@ -88,14 +88,14 @@ public class Player : Character {
     }
 
 	private void HandleInput(){
-		if (Input.GetKeyDown (KeyCode.X)) {
+		if (Input.GetKeyDown (KeyCode.X) || Input.GetKeyDown("joystick button 0")) {
 			if (!CharaAnimator.GetBool ("crouch"))
 				CharaAnimator.SetTrigger ("jump");
 			
             //FuzzyStateMachines.Instance.initiateFuSMs();
             //FuzzyStateMachines.Instance.runFuSMs();
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
+		}
+		if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown("joystick button 3"))
         {
             CharaAnimator.SetTrigger("lightAttack");
             if (!jump)
@@ -114,7 +114,7 @@ public class Player : Character {
             //FuzzyStateMachines.Instance.initiateFuSMs();
             //FuzzyStateMachines.Instance.runFuSMs();
         }
-        if (Input.GetKeyDown(KeyCode.C))
+		if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown("joystick button 4"))
         {
             CharaAnimator.SetTrigger("rangedAttack");
             if (!jump)
@@ -133,7 +133,7 @@ public class Player : Character {
             //FuzzyStateMachines.Instance.initiateFuSMs();
             //FuzzyStateMachines.Instance.runFuSMs();
         }
-        if (Input.GetKeyDown(KeyCode.V))
+		if (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown("joystick button 1"))
         {
             CharaAnimator.SetTrigger("heavyAttack"); //it's become crouch attack, if character is already in crouch position
             if (!crouch)
@@ -161,14 +161,14 @@ public class Player : Character {
 		}
 		//--------------------------------------------------------------------------	
 
-		if (Input.GetKeyDown (KeyCode.DownArrow)) {
+		if (Input.GetKeyDown (KeyCode.DownArrow) || Input.GetAxis("Vertical") < -0.75f) { //INI MASIH TES!!!!!!!!!!!!!!!!!!!!!!!!!!!
 			if (onGround && !jump) {
 				CharaAnimator.SetBool ("crouch", true);
 			}
 
             //FuzzyStateMachines.Instance.initiateFuSMs();
             //FuzzyStateMachines.Instance.runFuSMs();
-		} else if (Input.GetKeyUp (KeyCode.DownArrow)) {
+		} else if (Input.GetKeyUp (KeyCode.DownArrow) || Input.GetAxis("Vertical") == 0.0f) {
             CharaAnimator.SetBool("crouch", false);
 		}
 	}
@@ -208,10 +208,10 @@ public class Player : Character {
         get { return health <= 0; }
     }
 
-    public override IEnumerator TakeDamage()
+	public override IEnumerator TakeDamage(float damagePoint)
 	{
 		if (!immortal) {
-			health -= 10;
+			health -= (int)damagePoint;
 			healthBar.GetComponent<HealthBar> ().UpdateHealthBar (health);
 			if (CharaAnimator.GetBool ("crouch"))
 				CharaAnimator.SetBool ("crouch", false);

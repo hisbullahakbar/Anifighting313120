@@ -25,17 +25,21 @@ public class JumpToOtherScene : MonoBehaviour {
 		for (int i = 0; i < keysJumpScene.Count; i++) {
 			if (Input.GetKeyDown (keysJumpScene [i])) {
 				#region specialfor fairy tail //just for main menu
-				if (keysJumpScene [i] == KeyCode.Return || keysJumpScene [i] == KeyCode.Return) {
+				if (keysJumpScene [i] == KeyCode.Return) {
 					if (isHasTransitionSound)
 						soundManager.effectSoundPlay (8);
-					StartCoroutine(goToSceneDelay("modechoosen"));
-				}
-				else
-				{
+					StartCoroutine (goToSceneDelay ("modechoosen"));
+				} else {
 					goToScene (keysSceneName [i]);
 				}
 				#endregion
 			}
+		}
+			
+		if (Input.GetKeyDown ("joystick button 11")) {
+			if (isHasTransitionSound)
+				soundManager.effectSoundPlay (8);
+			StartCoroutine (goToSceneDelay ("modechoosen"));
 		}
 	}
 

@@ -57,6 +57,7 @@ public class WalkState : IEnemyState
         if (walkTimer >= walkDuration || (Player.Instance.onGround && enemy.InNearRange))
         {
             //enemy.ChangeState(new IdleState());
+
             FuzzyStateMachines.Instance.initiateFuSMs();
             FuzzyStateMachines.Instance.runFuSMs();
 

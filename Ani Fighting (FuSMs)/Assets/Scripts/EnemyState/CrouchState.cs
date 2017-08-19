@@ -47,8 +47,8 @@ public class CrouchState : IEnemyState
         crouchTimer += Time.deltaTime;
         //enemy.ChangeState(new HeavyAttackState());
       
-        FuzzyStateMachines.Instance.initiateFuSMs();
-        FuzzyStateMachines.Instance.runFuSMs();
+        //FuzzyStateMachines.Instance.initiateFuSMs();
+        //FuzzyStateMachines.Instance.runFuSMs();
 
 		/*
         switch (((MovementType.enemy)FuzzyStateMachines.Instance.ChoosenRuleIndex).ToString())

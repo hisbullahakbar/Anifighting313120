@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Character : MonoBehaviour
 {
-
     [SerializeField]
     protected float movementSpeed;
     [SerializeField]
@@ -57,10 +56,20 @@ public abstract class Character : MonoBehaviour
 	public int IDCharacter{ get; protected set; }
 
 	protected bool immortal = false;
+	public bool isImmortal {
+		get { return immortal; }
+	}
 
 	[SerializeField]
 	protected float immortalTime;
 	protected SpriteRenderer spriteRenderer;
+
+	[SerializeField] 
+	private float lightAttackPoint;
+	[SerializeField] 
+	private float heavyAttackPoint;
+	[SerializeField] 
+	private float rangeAttackPoint;
 
     public virtual void Start()
     {
@@ -97,7 +106,7 @@ public abstract class Character : MonoBehaviour
         attackCollider[i].enabled = false;
     }
 
-    public abstract IEnumerator TakeDamage();
+    public abstract IEnumerator TakeDamage(float damagePoint);
 
     public virtual void FixedUpdate()
     {
@@ -186,18 +195,39 @@ public abstract class Character : MonoBehaviour
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
 		if (damageSources.Contains (other.tag)) {
-			//MASIH ADA BUG DIBAGIAN GETDAMAGE!!!
-			//1. get damage tidak keluar saat player memilih state aktif lain
-
-			//if (!immortal) {
-				StartCoroutine (TakeDamage ());
-			//}
+			if (gameObject.tag == "Player") {
+				if (other.tag == "Magic") {
+					StartCoroutine (TakeDamage (Enemy.Instance.getAttackPoint("RangeAttack")));
+				} else if (LayerMask.LayerToName (other.gameObject.layer) == "LightAttack") {
+					StartCoroutine (TakeDamage (Enemy.Instance.getAttackPoint("LightAttack")));
+				} else if (LayerMask.LayerToName (other.gameObject.layer) == "HeavyAttack") {
+					StartCoroutine (TakeDamage (Enemy.Instance.getAttackPoint("HeavyAttack")));
+				}
+			}
+			if (gameObject.tag == "Enemy") {
+				if (other.tag == "Magic") {
+					StartCoroutine (TakeDamage (Player.Instance.getAttackPoint("RangeAttack")));
+				} else if (LayerMask.LayerToName (other.gameObject.layer) == "LightAttack") {
+					StartCoroutine (TakeDamage (Player.Instance.getAttackPoint("LightAttack")));
+				} else if (LayerMask.LayerToName (other.gameObject.layer) == "HeavyAttack") {
+					StartCoroutine (TakeDamage (Player.Instance.getAttackPoint("HeavyAttack")));
+				}
+			}
 		}
     }
 
+	public float getAttackPoint(string attackType){
+		if (attackType == "LightAttack") {
+			return lightAttackPoint;
+		} else if (attackType == "HeavyAttack") {
+			return heavyAttackPoint;
+		}
+		return rangeAttackPoint; //else magic attack / range attack
+	}
+
 	protected IEnumerator IndicateImmortal(){
 		while (immortal) {
-			spriteRenderer.color = Color.yellow;
+			spriteRenderer.color = new Color (255f / 255, 255f / 255, 102f / 255);
 			yield return new WaitForSeconds (0.05f);
 			spriteRenderer.color = Color.white;
 			yield return new WaitForSeconds (0.05f);

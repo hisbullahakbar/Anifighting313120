@@ -5,8 +5,8 @@ using UnityEngine;
 public class IdleState : IEnemyState
 {
     private Enemy enemy;
-    private float idleTimer;
-    private float idleDuration = 0f; //5f
+    //private float idleTimer;
+    //private float idleDuration = 0f; //5f
 
     public string getStateName()
     {
@@ -42,17 +42,17 @@ public class IdleState : IEnemyState
     {
         enemy.CharaAnimator.SetFloat("speed", 0);
 
-        idleTimer += Time.deltaTime;
-        if (idleTimer >= idleDuration)
-        {
-            //if (Player.Instance.onGround && enemy.InNearRange)
-            //{
-                //enemy.ChangeState(new LightAttackState());
-            //}
-            //else
-            //{
-                //enemy.ChangeState(new WalkState());
-            //}
+        //idleTimer += Time.deltaTime;
+        //if (idleTimer >= idleDuration)
+        //{
+			            //if (Player.Instance.onGround && enemy.InNearRange)
+			            //{
+			                //enemy.ChangeState(new LightAttackState());
+			            //}
+			            //else
+			            //{
+			                //enemy.ChangeState(new WalkState());
+			            //}
 
             FuzzyStateMachines.Instance.initiateFuSMs();
             FuzzyStateMachines.Instance.runFuSMs();
@@ -85,6 +85,6 @@ public class IdleState : IEnemyState
                     enemy.ChangeState(new CrouchState());
                     break;
             }
-        }
+        //}
     }
 }
