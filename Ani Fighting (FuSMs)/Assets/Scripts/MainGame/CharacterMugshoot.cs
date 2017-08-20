@@ -25,7 +25,13 @@ public class CharacterMugshoot : MonoBehaviour
 
     void Start()
     {
-        charaExpression = CharaExpression.normal;
+		if (gameObject.tag == "Player") {
+			charaIcon = GameObject.Find ("PlayerCharaIcon");
+		}
+		else if (gameObject.tag == "Enemy") {
+			charaIcon = GameObject.Find ("EnemyCharaIcon");
+		}
+		charaExpression = CharaExpression.normal;
     }
 
     public void changeExpression(CharaExpression expression)

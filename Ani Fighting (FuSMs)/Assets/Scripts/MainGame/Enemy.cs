@@ -73,7 +73,8 @@ public class Enemy : Character
     }
 
     public override void Start()
-    {
+	{
+		healthBar = GameObject.Find ("EnemySpecialBars");
         base.Start();
 		target = Player.Instance.gameObject;
 		IDCharacter = CharacterChoosenManager.statSelectedCharacter2;

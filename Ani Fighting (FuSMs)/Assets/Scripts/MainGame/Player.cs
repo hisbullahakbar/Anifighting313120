@@ -26,6 +26,7 @@ public class Player : Character
 	}
 
 	public override void Start () {
+		healthBar = GameObject.Find ("PlayerSpecialBars");
 		base.Start();
 		charaRigidbody2D = GetComponent<Rigidbody2D> (); 
 		IDCharacter = CharacterChoosenManager.statSelectedCharacter1;
@@ -35,7 +36,7 @@ public class Player : Character
 		else if (LayerMask.LayerToName(gameObject.layer) == "Lyon")
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Erza"), gameObject.layer);
 
-		Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("FootCollider"), gameObject.layer);
+		//Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("FootCollider"), gameObject.layer);
 	}
 
     void Update()

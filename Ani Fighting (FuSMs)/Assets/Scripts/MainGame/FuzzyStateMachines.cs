@@ -51,6 +51,7 @@ public class FuzzyStateMachines : MonoBehaviour {
     FuSMsLogHistory fusmsLogHistory;
 
 	void Start () {
+		fusmsLogHistory = FindObjectOfType<FuSMsLogHistory>();
     }
 
     public void initiateFuSMs()

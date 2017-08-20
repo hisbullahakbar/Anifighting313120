@@ -82,9 +82,9 @@ public abstract class Character : MonoBehaviour
             setAttackColliderFalse(i);
         }
         damageCounter = 0;
-        healthBar.GetComponent<HealthBar>().SetMaximum(gameObject);
-        healthBar.GetComponent<HealthBar>().UpdateHealthBar(health);
 		spriteRenderer = GetComponent<SpriteRenderer> ();
+		healthBar.GetComponent<HealthBar> ().SetMaximum (gameObject);
+		healthBar.GetComponent<HealthBar> ().UpdateHealthBar (health);
     }
 
     void Update()

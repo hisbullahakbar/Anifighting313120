@@ -76,6 +76,12 @@ public class BattleSceneManager : MonoBehaviour {
 	[SerializeField]
 	Sprite[] cbiEnemySprite;
 
+	bool alreadySummoned = false;
+	[SerializeField]
+	GameObject[] playerPrefab;
+	[SerializeField]
+	GameObject[] enemyPrefab;
+
     [SerializeField]
     Text textWinLoseState;
 	[SerializeField]
@@ -101,6 +107,11 @@ public class BattleSceneManager : MonoBehaviour {
 	void Update () {
 		switch (state) {
 		case BattleSceneState.characterInfo: //0
+			if (!alreadySummoned) {
+				summonPlayerPrefab (CharacterChoosenManager.statSelectedCharacter1);
+				summonEnemyPrefab (CharacterChoosenManager.statSelectedCharacter2);
+				alreadySummoned = true;
+			}
 			break;
 		case BattleSceneState.beginingPose: //1
 			if (!isAlreadyBeginingPose) {
@@ -159,6 +170,16 @@ public class BattleSceneManager : MonoBehaviour {
 	IEnumerator WinLoseMenuDelayActivating(){
 		yield return new WaitForSeconds (2f);
 		state = BattleSceneManager.BattleSceneState.winLoseInfo;
+	}
+
+	void summonPlayerPrefab(int playerID){
+		Instantiate (playerPrefab [playerID]);
+		//playerPrefab [playerID].SetActive(true);
+	}
+
+	void summonEnemyPrefab(int enemyID){
+		Instantiate (enemyPrefab [enemyID]);
+		//enemyPrefab [enemyID].SetActive(true);
 	}
 
 	void loadGameModeSprite(int id){
