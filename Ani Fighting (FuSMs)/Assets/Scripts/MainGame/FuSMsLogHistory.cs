@@ -5,22 +5,22 @@ using UnityEngine;
 public class FuSMsLogHistory : MonoBehaviour {
 
     [System.Serializable]
-    class TransitionData
+	public class TransitionData
     {
         [System.Serializable]
-        struct TotalAttackType
+        public struct TotalAttackType
         {
             public int light, heavy, ranged;
         }
 
         [System.Serializable]
-        struct TotalAttackDirection
+		public struct TotalAttackDirection
         {
             public int up, middle, down;
         }
 
         [System.Serializable]
-        struct NextStatePersentage
+		public struct NextStatePersentage
         {
             public float idle, walk, walkBackward, lightAttack, heavyAttack, rangedAttack, jump, crouch;
         }
@@ -30,11 +30,11 @@ public class FuSMsLogHistory : MonoBehaviour {
         //MovementType.enemy previousState; sementara string
 		public float range;
         [SerializeField]
-        TotalAttackType totalAttackType;
+        public TotalAttackType totalAttackType;
         [SerializeField]
-        TotalAttackDirection totalAttackDirection;
+		public TotalAttackDirection totalAttackDirection;
         [SerializeField]
-        NextStatePersentage nextStatePersentage;
+		public NextStatePersentage nextStatePersentage;
 		public string choosenStage;
         //MovementType.enemy choosenStage; sementara string
 
@@ -70,6 +70,16 @@ public class FuSMsLogHistory : MonoBehaviour {
     List<TransitionData> transitionData;
     int totalTransition;
 
+	private static FuSMsLogHistory instance;
+	public static FuSMsLogHistory Instance {
+		get {
+			if (instance == null) {
+				instance = GameObject.FindObjectOfType<FuSMsLogHistory> ();
+			}
+			return instance;
+		}
+	}
+
 	void Start () {
         transitionData.Clear();
         totalTransition = 0;
@@ -84,7 +94,11 @@ public class FuSMsLogHistory : MonoBehaviour {
         int totalLightAttack, int totalHeavyAttack, int totalRangedAttack, int totalUpAttack, int totalMiddleAttack, int totalDownAttack,
         float[] nextStatePersentage, string choosenStage)
     {
-        transitionData.Add(new TransitionData(totalTransition, previousState, range, totalLightAttack, totalHeavyAttack, totalRangedAttack,
+		transitionData.Add(new TransitionData(transitionData.Count, previousState, range, totalLightAttack, totalHeavyAttack, totalRangedAttack,
             totalUpAttack, totalMiddleAttack, totalUpAttack, nextStatePersentage, choosenStage));
     }
+
+	public List<TransitionData> getTransitionData(){
+		return transitionData;
+	}
 }

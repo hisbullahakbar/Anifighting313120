@@ -93,6 +93,9 @@ public class BattleSceneManager : MonoBehaviour {
 	[SerializeField]
 	Text winIdCharacter;
 
+	[SerializeField]
+	HSController hsController;
+
     void Start()
 	{
 		state = BattleSceneState.characterInfo;
@@ -159,7 +162,33 @@ public class BattleSceneManager : MonoBehaviour {
 		case BattleSceneState.winLoseInfo: //5
 			textWinLoseState.enabled = false;
 			winLoseMenu.SetActive (true);
-			if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown("joystick button 11")) {
+			if(Input.GetKeyDown (KeyCode.Backspace) || Input.GetKeyDown("joystick button 12")){
+				PlayerPrefs.SetInt ("playingTime", PlayerPrefs.GetInt ("playingTime") + 1);
+				int playingTime = PlayerPrefs.GetInt ("playingTime");
+				for (int i = 0; i < FuSMsLogHistory.Instance.getTransitionData ().Count; i++) {
+					StartCoroutine (hsController.savingFuSMsLogHistory (
+						FuSMsLogHistory.Instance.getTransitionData () [i].transitionNumber,
+						playingTime,
+						FuSMsLogHistory.Instance.getTransitionData () [i].previousState,
+						FuSMsLogHistory.Instance.getTransitionData () [i].range,
+						FuSMsLogHistory.Instance.getTransitionData () [i].totalAttackType.light,
+						FuSMsLogHistory.Instance.getTransitionData () [i].totalAttackType.heavy,
+						FuSMsLogHistory.Instance.getTransitionData () [i].totalAttackType.ranged,
+						FuSMsLogHistory.Instance.getTransitionData () [i].totalAttackDirection.up,
+						FuSMsLogHistory.Instance.getTransitionData () [i].totalAttackDirection.middle,
+						FuSMsLogHistory.Instance.getTransitionData () [i].totalAttackDirection.down,
+						FuSMsLogHistory.Instance.getTransitionData () [i].nextStatePersentage.idle,
+						FuSMsLogHistory.Instance.getTransitionData () [i].nextStatePersentage.walk,
+						FuSMsLogHistory.Instance.getTransitionData () [i].nextStatePersentage.walkBackward,
+						FuSMsLogHistory.Instance.getTransitionData () [i].nextStatePersentage.lightAttack,
+						FuSMsLogHistory.Instance.getTransitionData () [i].nextStatePersentage.heavyAttack,
+						FuSMsLogHistory.Instance.getTransitionData () [i].nextStatePersentage.rangedAttack,
+						FuSMsLogHistory.Instance.getTransitionData () [i].nextStatePersentage.jump,
+						FuSMsLogHistory.Instance.getTransitionData () [i].nextStatePersentage.crouch,
+						FuSMsLogHistory.Instance.getTransitionData () [i].choosenStage));
+				}
+			}
+			else if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown("joystick button 11")) {
 				StopAllCoroutines ();
 				JumpToOtherScene.quickGoToScene ("modechoosen");
 			}
