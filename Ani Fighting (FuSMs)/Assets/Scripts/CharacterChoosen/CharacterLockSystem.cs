@@ -10,8 +10,10 @@ public class CharacterLockSystem : MonoBehaviour {
 		unlocked
 	}
 
-	public LockState lockState;
-	public string characterName;
+	[SerializeField]
+	LockState lockState;
+
+	string characterName;
 
 	[SerializeField]
 	int id;
@@ -40,5 +42,13 @@ public class CharacterLockSystem : MonoBehaviour {
 			characterName = "natsu";
 			break;
 		}
+	}
+
+	public LockState getLockState(){
+		return lockState;
+	}
+
+	public string getCharacterName(){
+		return characterName;
 	}
 }

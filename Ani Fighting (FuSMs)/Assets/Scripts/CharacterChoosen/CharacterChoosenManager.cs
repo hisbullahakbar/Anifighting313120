@@ -88,14 +88,14 @@ public class CharacterChoosenManager : MonoBehaviour {
 				JumpToOtherScene.quickGoToScene ("arenachoosen");
 			} else {
 				if (selectedCharacter != -1) {
-					if (charactersLogo [selectedCharacter].GetComponent<CharacterLockSystem> ().lockState == CharacterLockSystem.LockState.unlocked) {
+					if (charactersLogo [selectedCharacter].GetComponent<CharacterLockSystem> ().getLockState() == CharacterLockSystem.LockState.unlocked) {
 						if (statSelectedCharacter1 == -1) {
 							statSelectedCharacter1 = selectedCharacter;
 							selectedCharacter = -1;
 
-							if (charactersLogo [statSelectedCharacter1].GetComponent<CharacterLockSystem> ().characterName == "erza")
+							if (charactersLogo [statSelectedCharacter1].GetComponent<CharacterLockSystem> ().getCharacterName() == "erza")
 								soundManager.effectSoundPlay (3);
-							else if (charactersLogo [statSelectedCharacter1].GetComponent<CharacterLockSystem> ().characterName == "lyon")
+							else if (charactersLogo [statSelectedCharacter1].GetComponent<CharacterLockSystem> ().getCharacterName() == "lyon")
 								soundManager.effectSoundPlay (4);
 						} else {
 							if (statSelectedCharacter1 != selectedCharacter) { //tidak memilih karakter yg sama
@@ -104,9 +104,9 @@ public class CharacterChoosenManager : MonoBehaviour {
 							}
 							soundManager.effectSoundPlay (5);
 
-							if (charactersLogo [statSelectedCharacter2].GetComponent<CharacterLockSystem> ().characterName == "erza")
+							if (charactersLogo [statSelectedCharacter2].GetComponent<CharacterLockSystem> ().getCharacterName() == "erza")
 								StartCoroutine (playingDelaySFX (3));
-							else if (charactersLogo [statSelectedCharacter2].GetComponent<CharacterLockSystem> ().characterName == "lyon")
+							else if (charactersLogo [statSelectedCharacter2].GetComponent<CharacterLockSystem> ().getCharacterName() == "lyon")
 								StartCoroutine (playingDelaySFX (4));
 						}
 					} else {

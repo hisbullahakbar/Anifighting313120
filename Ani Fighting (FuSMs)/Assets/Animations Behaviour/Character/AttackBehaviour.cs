@@ -30,7 +30,7 @@ public class AttackBehaviour : StateMachineBehaviour {
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<Character>().attack = false;
-        for (int i = 0; i < animator.GetComponent<Character>().attackCollider.Length; i++)
+        for (int i = 0; i < animator.GetComponent<Character>().AttackCollider.Length; i++)
         {
             animator.GetComponent<Character>().setAttackColliderFalse(i);
         }

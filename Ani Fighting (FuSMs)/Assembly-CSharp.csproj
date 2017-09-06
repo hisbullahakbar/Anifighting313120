@@ -62,7 +62,6 @@
      <Compile Include="Assets\Scripts\EnemyState\IdleState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\JumpState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\LightAttackState.cs" />
-     <Compile Include="Assets\Scripts\EnemyState\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\EnemyState\RangedAttackState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\WalkBackwardState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\WalkState.cs" />
@@ -72,7 +71,6 @@
      <Compile Include="Assets\Scripts\MainGame\CharacterMugshoot.cs" />
      <Compile Include="Assets\Scripts\MainGame\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\MainGame\Enemy.cs" />
-     <Compile Include="Assets\Scripts\MainGame\EnemySight.cs" />
      <Compile Include="Assets\Scripts\MainGame\FuSMsLogHistory.cs" />
      <Compile Include="Assets\Scripts\MainGame\FuzzyStateMachines.cs" />
      <Compile Include="Assets\Scripts\MainGame\HealthBar.cs" />

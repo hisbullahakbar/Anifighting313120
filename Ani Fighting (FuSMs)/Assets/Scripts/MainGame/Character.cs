@@ -31,7 +31,15 @@ public abstract class Character : MonoBehaviour
     public abstract bool IsDead { get; }
 
     [SerializeField]
-    public EdgeCollider2D[] attackCollider;
+	private EdgeCollider2D[] attackCollider;
+	public EdgeCollider2D[] AttackCollider{
+		get{ 
+			return attackCollider;
+		}
+		set{
+			attackCollider = value;
+		}
+	}
 
     [SerializeField]
     private List<string> damageSources;
