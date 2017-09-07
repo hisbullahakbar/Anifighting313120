@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FuSMsLogHistory : MonoBehaviour {
-
     [System.Serializable]
 	public class TransitionData
     {
@@ -95,7 +94,7 @@ public class FuSMsLogHistory : MonoBehaviour {
         float[] nextStatePersentage, string choosenStage)
     {
 		transitionData.Add(new TransitionData(transitionData.Count, previousState, range, totalLightAttack, totalHeavyAttack, totalRangedAttack,
-            totalUpAttack, totalMiddleAttack, totalUpAttack, nextStatePersentage, choosenStage));
+            totalUpAttack, totalMiddleAttack, totalDownAttack, nextStatePersentage, choosenStage));
     }
 
 	public List<TransitionData> getTransitionData(){

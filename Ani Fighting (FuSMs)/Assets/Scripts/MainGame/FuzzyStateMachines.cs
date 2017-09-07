@@ -15,7 +15,7 @@ public class FuzzyStateMachines : MonoBehaviour {
             }
             return instance;
         }
-    } 
+    }
 
     float totalRange;
     int totalLightAttack, totalHeavyAttack, totalRangedAttack, 
@@ -70,12 +70,12 @@ public class FuzzyStateMachines : MonoBehaviour {
         maxRange = Player.Instance.Target.GetComponent<Enemy>().FarRange;
 
         totalRange = Mathf.Abs(Player.Instance.gameObject.transform.position.x - Player.Instance.Target.transform.position.x);
-        totalLightAttack = PlayerInputManager.instance.getCountMovement(0).getTotalMovement();
-        totalHeavyAttack = PlayerInputManager.instance.getCountMovement(1).getTotalMovement();
-        totalRangedAttack = PlayerInputManager.instance.getCountMovement(2).getTotalMovement();
-        totalUpAttack = PlayerInputManager.instance.getCountMovement(3).getTotalMovement();
-        totalMiddleAttack = PlayerInputManager.instance.getCountMovement(4).getTotalMovement();
-        totalDownAttack = PlayerInputManager.instance.getCountMovement(5).getTotalMovement();
+        totalLightAttack = PlayerInputManager.instance.getCountMovement(0).getTotalMovement() + 1;
+        totalHeavyAttack = PlayerInputManager.instance.getCountMovement(1).getTotalMovement() + 1;
+        totalRangedAttack = PlayerInputManager.instance.getCountMovement(2).getTotalMovement() + 1;
+        totalUpAttack = PlayerInputManager.instance.getCountMovement(3).getTotalMovement() + 1;
+        totalMiddleAttack = PlayerInputManager.instance.getCountMovement(4).getTotalMovement() + 1;
+        totalDownAttack = PlayerInputManager.instance.getCountMovement(5).getTotalMovement() + 1;
 
         miuRange[0] = calculateMiuValue(totalRange, false, true);
         miuRange[1] = calculateMiuValue(totalRange, true, true);
@@ -89,11 +89,11 @@ public class FuzzyStateMachines : MonoBehaviour {
         totalRuleValue = 0;
         for (int i = 0; i < miuRange.Length; i++)
         {
-            for (int j = 0; j < miuAttackType.Length; j++)
+            for (int j = 0; j < miuAttackDirection.Length; j++)
             {
-                for (int k = 0; k < miuAttackDirection.Length; k++)
+                for (int k = 0; k < miuAttackType.Length; k++)
                 {
-                    alphaRuleValue[i * 9 + j * 3 + k] = calculateRuleAND(new float[] { miuRange[i], miuAttackType[j], miuAttackDirection[k] });
+                    alphaRuleValue[i * 9 + j * 3 + k] = calculateRuleAND(new float[] { miuRange[i], miuAttackDirection[j], miuAttackType[k] });
                     totalRuleValue += alphaRuleValue[i * 9 + j * 3 + k];
                 }
             }
@@ -219,7 +219,8 @@ public class FuzzyStateMachines : MonoBehaviour {
 		//----------------------------------------------------------------
 
         fusmsLogHistory.addTransition(Player.Instance.Target.GetComponent<Enemy>().CurrentState.getStateName(),
-            totalRange, totalLightAttack, totalHeavyAttack, totalRangedAttack, totalUpAttack, totalMiddleAttack, totalDownAttack,
+            totalRange, totalLightAttack - 1, totalHeavyAttack - 1, totalRangedAttack - 1, 
+            totalUpAttack - 1, totalMiddleAttack - 1, totalDownAttack - 1,
             finalRuleValues, ((MovementType.enemy)ChoosenRuleIndex).ToString());
     }
 
