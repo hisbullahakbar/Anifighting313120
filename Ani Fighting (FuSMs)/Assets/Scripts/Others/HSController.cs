@@ -20,7 +20,7 @@ public class HSController : MonoBehaviour
 		//MD5Test = GetComponent<MD5>();
 	}
 
-    public IEnumerator connectFuSMsLogHistory()
+    /*public IEnumerator connectFuSMsLogHistory()
     {
         string connectFuSMsLogHistory_url = connectFuSMsLogHistoryURL;
 
@@ -36,9 +36,9 @@ public class HSController : MonoBehaviour
         {
             Debug.Log(connectFuSMsLogHistory_get.text);
         }
-    }
+    }*/
 
-    public IEnumerator savingFuSMsLogHistory(int idx, int idx_fighting, string previous_state, float range_characters, int total_lightattack, int total_heavyattack, 
+    /*public IEnumerator savingFuSMsLogHistory(int idx, int idx_fighting, string previous_state, float range_characters, int total_lightattack, int total_heavyattack, 
 		int total_rangedattack, int total_upattack, int total_middleattack, int total_downattack, float percentage_idle, float percentage_walk, float percentage_walkbackward, 
 		float percentage_lightattack, float percentage_heavyattack, float percentage_rangedattack, float percentage_jump, float percentage_crouch, string choosen_state)
 	{
@@ -71,7 +71,7 @@ public class HSController : MonoBehaviour
 		} else {
 			Debug.Log (savingFuSMsLogHistory_get.text);
 		}
-	}
+	}*/
 
     public IEnumerator savingFuSMsLogHistory()
     {

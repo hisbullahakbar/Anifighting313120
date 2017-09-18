@@ -170,8 +170,8 @@ public class BattleSceneManager : MonoBehaviour {
                     PlayerPrefs.SetInt("playingTime", PlayerPrefs.GetInt("playingTime") + 1);
                     StartCoroutine(hsController.savingFuSMsLogHistory());
 
-                    //StartCoroutine(hsController.connectFuSMsLogHistory());
-                    /* int playingTime = PlayerPrefs.GetInt("playingTime");
+                    /*StartCoroutine(hsController.connectFuSMsLogHistory());
+                    int playingTime = PlayerPrefs.GetInt("playingTime");
                      int i = 0;
                      while (i < FuSMsLogHistory.Instance.getTransitionData().Count)
                      {
