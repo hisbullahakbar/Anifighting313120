@@ -35,7 +35,7 @@ public class CharacterChoosenManager : MonoBehaviour {
 
 	void Update () {
 		checkInput ();
-		updateSelectingMode ();
+		updateSelectingCharacter ();
 
 		if (statSelectedCharacter1 == -1) {
 			playerIcon [0].GetComponent<SpriteRenderer> ().enabled = false;
@@ -133,7 +133,7 @@ public class CharacterChoosenManager : MonoBehaviour {
 		soundManager.effectSoundPlay (idSFX);
 	}
 
-	void updateSelectingMode(){
+	void updateSelectingCharacter(){
 		for (int i = 0; i < charactersLogo.Length; i++) {
 			if (i == selectedCharacter || i == statSelectedCharacter1 || i == statSelectedCharacter2) { 
 				selectingAnimation (charactersLogo [i], charactersText [i]);

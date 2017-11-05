@@ -7,7 +7,7 @@ public class HSController : MonoBehaviour
 	//if use localHost
 
 	public string savingFuSMsLogHistoryURL = "http://localhost/fairy_tail_fighting/savingFuSMsLogHistory.php?";
-    public string connectFuSMsLogHistoryURL = "http://localhost/fairy_tail_fighting/connectFuSMsLogHistory.php?";
+    //public string connectFuSMsLogHistoryURL = "http://localhost/fairy_tail_fighting/connectFuSMsLogHistory.php?";
 
     //example if use public host
     /*

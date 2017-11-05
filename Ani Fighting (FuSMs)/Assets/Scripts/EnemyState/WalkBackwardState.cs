@@ -32,7 +32,7 @@ public class WalkBackwardState : IEnemyState
     {
     }
 
-    public void OnTriggerEnter(Collider2D other)
+    public void OnTriggerEnter(Collider2D other) //marked
     {
         if (other.tag == "Edge")
         {
