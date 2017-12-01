@@ -72,6 +72,9 @@ public class Enemy : Character
         }
     }
 
+    [SerializeField]
+    bool useFSM;
+
     public override void Start()
 	{
 		healthBar = GameObject.Find ("EnemySpecialBars");
@@ -79,7 +82,10 @@ public class Enemy : Character
 		target = Player.Instance.gameObject;
 		IDCharacter = CharacterChoosenManager.statSelectedCharacter2;
 
-        ChangeState(new IdleState());
+        if (useFSM)
+            ChangeState(new IdleStateFSM());
+        else
+            ChangeState(new IdleState());
 
 		if (LayerMask.LayerToName(gameObject.layer) == "Erza")
 			Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Lyon"), gameObject.layer);

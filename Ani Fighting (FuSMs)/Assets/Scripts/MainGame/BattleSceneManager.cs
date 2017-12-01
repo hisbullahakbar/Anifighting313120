@@ -99,6 +99,9 @@ public class BattleSceneManager : MonoBehaviour {
     int delaySaveLogTime = 0;
     int maxDelaySaveLogTime = 60;
 
+    [SerializeField]
+    bool useFSM;
+
     void Start()
 	{
 		state = BattleSceneState.characterInfo;
@@ -168,7 +171,10 @@ public class BattleSceneManager : MonoBehaviour {
                 if (Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown("joystick button 12"))
                 {
                     PlayerPrefs.SetInt("playingTime", PlayerPrefs.GetInt("playingTime") + 1);
-                    StartCoroutine(hsController.savingFuSMsLogHistory());
+                    if (useFSM)
+                        StartCoroutine(hsController.savingFSMLogHistory());
+                    else
+                        StartCoroutine(hsController.savingFuSMsLogHistory());
 
                     /*StartCoroutine(hsController.connectFuSMsLogHistory());
                     int playingTime = PlayerPrefs.GetInt("playingTime");

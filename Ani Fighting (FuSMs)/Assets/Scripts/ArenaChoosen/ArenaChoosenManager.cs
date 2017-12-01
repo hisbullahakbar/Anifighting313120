@@ -79,7 +79,7 @@ public class ArenaChoosenManager : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Z) || Input.GetKeyDown("joystick button 0")) {
 			if (selectedArena != -1) {
-				JumpToOtherScene.quickGoToScene ("mainscene");
+				JumpToOtherScene.quickGoToScene ("mainscene2");
 			}
 		}
 

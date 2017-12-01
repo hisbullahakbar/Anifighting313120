@@ -200,7 +200,6 @@ public class FuzzyStateMachines : MonoBehaviour {
             }
         }
 
-        //Cek kembali bagian dibawah ini------- SEMENTARA FIX, TAPI CEK KEMBALI.............
         float randomValue = (float)Random.Range(1, 100);
         float tempTotal = 0;
         for (int i = 0; i < finalRuleValues.Length; i++)

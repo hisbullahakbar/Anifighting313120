@@ -56,6 +56,15 @@
      <Compile Include="Assets\Scripts\ArenaChoosen\ArenaChoosenManager.cs" />
      <Compile Include="Assets\Scripts\CharacterChoosen\CharacterChoosenManager.cs" />
      <Compile Include="Assets\Scripts\CharacterChoosen\CharacterLockSystem.cs" />
+     <Compile Include="Assets\Scripts\EnemyState FSM\CrouchStateFSM.cs" />
+     <Compile Include="Assets\Scripts\EnemyState FSM\HeavyAttackStateFSM.cs" />
+     <Compile Include="Assets\Scripts\EnemyState FSM\IEnemyStateFSM.cs" />
+     <Compile Include="Assets\Scripts\EnemyState FSM\IdleStateFSM.cs" />
+     <Compile Include="Assets\Scripts\EnemyState FSM\JumpStateFSM.cs" />
+     <Compile Include="Assets\Scripts\EnemyState FSM\LightAttackStateFSM.cs" />
+     <Compile Include="Assets\Scripts\EnemyState FSM\RangedAttackStateFSM.cs" />
+     <Compile Include="Assets\Scripts\EnemyState FSM\WalkBackwardStateFSM.cs" />
+     <Compile Include="Assets\Scripts\EnemyState FSM\WalkStateFSM.cs" />
      <Compile Include="Assets\Scripts\EnemyState\CrouchState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\HeavyAttackState.cs" />
      <Compile Include="Assets\Scripts\EnemyState\IEnemyState.cs" />
@@ -71,6 +80,8 @@
      <Compile Include="Assets\Scripts\MainGame\CharacterMugshoot.cs" />
      <Compile Include="Assets\Scripts\MainGame\CountDownTimer.cs" />
      <Compile Include="Assets\Scripts\MainGame\Enemy.cs" />
+     <Compile Include="Assets\Scripts\MainGame\FSMLogHistory.cs" />
+     <Compile Include="Assets\Scripts\MainGame\FiniteStateMachines.cs" />
      <Compile Include="Assets\Scripts\MainGame\FuSMsLogHistory.cs" />
      <Compile Include="Assets\Scripts\MainGame\FuzzyStateMachines.cs" />
      <Compile Include="Assets\Scripts\MainGame\HealthBar.cs" />

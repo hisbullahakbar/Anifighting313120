@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class HSController : MonoBehaviour
 {
-	//if use localHost
+    //if use localHost
 
-	public string savingFuSMsLogHistoryURL = "http://localhost/fairy_tail_fighting/savingFuSMsLogHistory.php?";
+    public string savingFuSMsLogHistoryURL = "http://localhost/fairy_tail_fighting/savingFuSMsLogHistory.php?";
+    public string savingFSMLogHistoryURL = "http://localhost/fairy_tail_fighting/savingFSMLogHistory.php?";
     //public string connectFuSMsLogHistoryURL = "http://localhost/fairy_tail_fighting/connectFuSMsLogHistory.php?";
 
     //example if use public host
@@ -16,9 +17,9 @@ public class HSController : MonoBehaviour
     //MD5 MD5Test;
 
     void Start()
-	{
-		//MD5Test = GetComponent<MD5>();
-	}
+    {
+        //MD5Test = GetComponent<MD5>();
+    }
 
     /*public IEnumerator connectFuSMsLogHistory()
     {
@@ -76,6 +77,7 @@ public class HSController : MonoBehaviour
     public IEnumerator savingFuSMsLogHistory()
     {
         int playingTime = PlayerPrefs.GetInt("playingTime");
+        Debug.Log("idx_fighting = " + PlayerPrefs.GetInt("playingTime"));
         int i = 0;
         while (i < FuSMsLogHistory.Instance.getTransitionData().Count)
         {
@@ -113,6 +115,47 @@ public class HSController : MonoBehaviour
             }
             i = i + 1;
         }
+    }
 
+    public IEnumerator savingFSMLogHistory()
+    {
+        int playingTime = PlayerPrefs.GetInt("playingTime");
+        int i = 0;
+        while (i < FSMLogHistory.Instance.getTransitionData().Count)
+        {
+            string savingFSMLogHistory_url = savingFSMLogHistoryURL + "idx=" + FSMLogHistory.Instance.getTransitionData()[i].transitionNumber
+                                               + "&idx_fighting=" + playingTime
+                                               + "&previous_state=" + WWW.EscapeURL(FSMLogHistory.Instance.getTransitionData()[i].previousState)
+                                               + "&range_characters=" + FSMLogHistory.Instance.getTransitionData()[i].range
+                                               + "&total_lightattack=" + FSMLogHistory.Instance.getTransitionData()[i].totalAttackType.light
+                                               + "&total_heavyattack=" + FSMLogHistory.Instance.getTransitionData()[i].totalAttackType.heavy
+                                               + "&total_rangedattack=" + FSMLogHistory.Instance.getTransitionData()[i].totalAttackType.ranged
+                                               + "&total_upattack=" + FSMLogHistory.Instance.getTransitionData()[i].totalAttackDirection.up
+                                               + "&total_middleattack=" + FSMLogHistory.Instance.getTransitionData()[i].totalAttackDirection.middle
+                                               + "&total_downattack=" + FSMLogHistory.Instance.getTransitionData()[i].totalAttackDirection.down
+                                               + "&percentage_idle=" + FSMLogHistory.Instance.getTransitionData()[i].nextStatePersentage.idle
+                                               + "&percentage_walk=" + FSMLogHistory.Instance.getTransitionData()[i].nextStatePersentage.walk
+                                               + "&percentage_walkbackward=" + FSMLogHistory.Instance.getTransitionData()[i].nextStatePersentage.walkBackward
+                                               + "&percentage_lightattack=" + FSMLogHistory.Instance.getTransitionData()[i].nextStatePersentage.lightAttack
+                                               + "&percentage_heavyattack=" + FSMLogHistory.Instance.getTransitionData()[i].nextStatePersentage.heavyAttack
+                                               + "&percentage_rangedattack=" + FSMLogHistory.Instance.getTransitionData()[i].nextStatePersentage.rangedAttack
+                                               + "&percentage_jump=" + FSMLogHistory.Instance.getTransitionData()[i].nextStatePersentage.jump
+                                               + "&percentage_crouch=" + FSMLogHistory.Instance.getTransitionData()[i].nextStatePersentage.crouch
+                                               + "&choosen_state=" + WWW.EscapeURL(FSMLogHistory.Instance.getTransitionData()[i].choosenStage);
+
+            Debug.Log("Checking..");
+            WWW savingFSMLogHistory_get = new WWW(savingFSMLogHistory_url);
+            yield return savingFSMLogHistory_get;
+
+            if (savingFSMLogHistory_get.error != null)
+            {
+                print("There was an error when saving log : " + savingFSMLogHistory_get.error);
+            }
+            else
+            {
+                Debug.Log(savingFSMLogHistory_get.text);
+            }
+            i = i + 1;
+        }
     }
 }
